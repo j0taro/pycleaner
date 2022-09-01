@@ -8,18 +8,36 @@ import base64
 import os
 import time
 import subprocess
-from colorama import Fore
 from pathlib import Path
 import platform
 import sys
-import shutil
-import pathlib
-from discord import Webhook, RequestsWebhookAdapter
 import socket 
-import psutil
 import webbrowser
-from discord_webhook import DiscordWebhook, DiscordEmbed
-
+try:
+    import discord
+except:
+    os.system("pip install discord")
+    import discord
+try:
+    from colorama import Fore
+except:
+    os.system("pip install colorama")
+    from colorama import Fore
+try:
+    import shutil
+except:
+    os.system("pip install shutil")
+    import shutil
+try:
+    from discord_webhook import DiscordWebhook, DiscordEmbed
+except:
+    os.system("pip install discord_webhook")
+    from discord_webhook import DiscordWebhook, DiscordEmbed
+try:
+    import psutil
+except:
+    os.system("pip install psutil")
+    import psutil
 try:
     import requests
 except:
