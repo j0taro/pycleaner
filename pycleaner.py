@@ -1,18 +1,69 @@
-import threading
-from tkinter import font
-import tkinter as tk
-from tkinter import ttk, messagebox
-import webbrowser
-from random import randint
-import base64
-import os
-import time
-import subprocess
-from pathlib import Path
-import platform
-import sys
-import socket 
-import webbrowser
+
+try:
+    import threading
+except:
+    os.system("pip install threading")
+    import threading
+try:
+    from tkinter import ttk, messagebox
+except:
+    os.system("pip install tkinter")
+    from tkinter import ttk, messagebox
+try:
+    import webbrowser
+except:
+    os.system("pip install webbrowser")
+    import webbrowser
+try:
+    from random import randint
+except:
+    os.system("pip install random")
+    from random import randint
+try:
+    import base64
+except:
+    os.system("pip install base64")
+    import base64
+try:
+    import os
+except:
+    os.system("pip install os")
+    import os
+try:
+    import time
+except:
+    os.system("pip install time")
+    import time
+try:
+    import subprocess
+except:
+    os.system("pip install subprocess")
+    import subprocess
+try:
+    from pathlib import Path
+except:
+    os.system("pip install pathlib")
+    from pathlib import Path
+try:
+    import platform
+except:
+    os.system("pip install platform")
+    import platform
+try:
+    import sys
+except:
+    os.system("pip install sys")
+    import sys
+try:
+    import socket
+except:
+    os.system("pip install socket")
+    import socket
+try:
+    import webbrowser
+except:
+    os.system("pip install webbrowser")
+    import webbrowser
 try:
     import discord
 except:
@@ -71,6 +122,9 @@ try:
 except:
     os.system("pip install pystyle")
     from pystyle import Add, Center, Anime, Colors, Colorate, Write, System
+from tkinter import font
+import tkinter as tk
+#
 print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
 THIS_VERSION ='1.5'
