@@ -71,9 +71,9 @@ try:
 except:
     os.system("pip install pystyle")
     from pystyle import Add, Center, Anime, Colors, Colorate, Write, System
- 
+print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
-THIS_VERSION ='1.4'
+THIS_VERSION ='1.5'
 def updater():
     v = requests.get("https://pastebin.com/raw/w29LjVc2").text
     time.sleep(0.5)
@@ -93,8 +93,13 @@ def updater():
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] You are running the latest version!")
         time.sleep(0.5)
 updater()
+#
+
+lol=(f"     [>] Running with Python {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}")
+version = sys.getwindowsversion()
+mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
-LMAO = 'version 1.4'
+LMAO = 'version 1.5'
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
@@ -103,36 +108,37 @@ IPAddr=socket.gethostbyname(hostname)
 tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
-#i just wanna know how many people ran my shit dont spam nigga thats gay tho
+#
+#i just wanna know how many people ran my shit dont spam my webhook nigga thats gay tho.
 
 webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="pycleaner bot", )
-embed = DiscordEmbed(title='pycleaner ', description= username +' used ur program damn ', color='03b2f8')
-embed.set_author(name='https://github.com/nightmare324/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-embed.set_footer(text='https://github.com/nightmare324/pycleaner', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>')
+webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="pycleaner bot",)
+embed = DiscordEmbed(title='pycleaner ', description= username +' used ur program damn ', color='ff0000')
+embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+embed.set_footer(text= mo + lol, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
 webhook.add_embed(embed)
 response = webhook.execute()
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░░░██╗██╗██╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░░██╔╝██║██║
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░██╔╝░██║██║
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░███████║╚═╝
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚════██║██╗
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░░░░╚═╝╚═╝''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░███████╗██╗
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔════╝██║
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░██████╗░██║
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░╚════██╗╚═╝
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗██████╔╝██╗
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚═════╝░╚═╝''')
 __author__ = 'jotaro' 
 __VERSION__ = '1.4'
 os.system("title PRESS ENTER")
 
-banner = LMAO+r'''
+banner =LMAO+r'''
 ███████╗██████╗░  ░█████╗░██╗░░░░░███████╗░█████╗░███╗░░██╗███████╗██████╗░
 ██╔════╝██╔══██╗  ██╔══██╗██║░░░░░██╔════╝██╔══██╗████╗░██║██╔════╝██╔══██╗
 █████╗░░██████╔╝  ██║░░╚═╝██║░░░░░█████╗░░███████║██╔██╗██║█████╗░░██████╔╝
 ██╔══╝░░██╔══██╗  ██║░░██╗██║░░░░░██╔══╝░░██╔══██║██║╚████║██╔══╝░░██╔══██╗
 ██║░░░░░██║░░██║  ╚█████╔╝███████╗███████╗██║░░██║██║░╚███║███████╗██║░░██║
 ╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
-'''+ BY
+'''+ BY + '                  welcome, '+username  
 
 System.Size(120, 30)
 System.Clear()
@@ -146,11 +152,12 @@ banner = Center.XCenter(LMAO+"""
 ██╔══╝░░██╔══██╗  ██║░░██╗██║░░░░░██╔══╝░░██╔══██║██║╚████║██╔══╝░░██╔══██╗
 ██║░░░░░██║░░██║  ╚█████╔╝███████╗███████╗██║░░██║██║░╚███║███████╗██║░░██║
 ╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
-"""+ BY)
+"""+BY)
+banner2 =Center.XCenter( mo +    lol)
 
 
 
-options = """
+options ="""
          OPTIONS                         OPTIONS                             OPTIONS
 
 1.)  create a restore point          2.)  temp cleaner                     3.)  log cleaner
@@ -158,7 +165,7 @@ options = """
 7.)  turn on hibernate               8.)  tree (better Responsiveness)     9.)  Delete Windows Update Cache
 10.) disable windows defender        11.) sfc scan                         12.) Debloater (use it if u know how to)
 13.) open restore point              14.) removes tools folder with files  15.) more info                     
-16.) exit
+16.) exit                            17.) add suggestion                   
 
 """
 def download(url, name):
@@ -170,8 +177,9 @@ def download(url, name):
 
 def main():
     os.system('cls')
-    print(Colorate.Vertical(Colors.blue_to_red, banner + options, 2))
-    choice = input(Colors.yellow + 'Which option do you choose? ->  ')
+    print(Colorate.Vertical(Colors.blue_to_red, banner2))
+    print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
+    choice = input(Colors.yellow + 'Which option do you choose '+ username+'? ->  ')
     
     #restore point
     if choice == '1':
@@ -232,49 +240,54 @@ def main():
     elif choice == '15':
         os.system('cls')
         print(Colors.red,ver)
-        print(Colors.white,''' whats new:
-        added auto update
-        more cleaner
-        fixed some stuff
-        webhook when ever u run the file (only for me)
-        more stuff in more info option 
+        print(Colors.white,'''suggestion now u can add suggestion
+    cleaner look
+    more stuff
+    fixed some bugs
         ''')
-        
-        print(Colors.orange,'')
-        version = sys.getwindowsversion()
-        print(platform.platform())
-        print(version)
-        print(platform.system())
-        print(platform.release())
-        print(platform.version())
-        print(platform.version().split('.')[2]) 
+        print(Colors.orange,platform.platform())
+        print(mo+lol)
         print((platform.machine())+ ' bit' )
         print("ur ip: "+IPAddr+' nice ip ngl')
         print('ur username is ' +   username)
-        print ('total gb: ',obj_Disk.total / (1024.0 ** 3))
-        print ('used gb:',obj_Disk.used / (1024.0 ** 3))
+        print ('total gb: ',obj_Disk.total / (1024.0 ** 3)) , print ('used gb:',obj_Disk.used / (1024.0 ** 3))
         print ('free gb:',obj_Disk.free / (1024.0 ** 3))
         print ('%: ',obj_Disk.percent)
         print('RAM memory % used:', psutil.virtual_memory()[2])
         print(Colors.white,'click enter to go back')
         print(Colors.white,'type more for more info')
-        choice = input(Colors.yellow + 'Which option do you choose? ->  ')
+        choice = input(Colors.blue + 'Which option do you choose? ->  ')
         if choice == 'more':
          webbrowser.open("https://untimelyimpressionableadministration.blus2tlia.repl.co/new.txt")
-        main()
+        
     #exit
     elif choice == '16': 
         os._exit(0) 
+    elif choice =='17':
+     suggestion = input("enter ur suggestion: ")
+     webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="new suggestion", )
+     webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="new suggestion",)
+     embed = DiscordEmbed(title='new suggestion ', description= 'damn '+username +''' added a new suggestion:
+''' + suggestion, color='000000')
+     embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+     embed.set_footer(text=mo + lol, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+     webhook.add_embed(embed)
+     response = webhook.execute()
+     print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER UPLOADER{Fore.RESET}]"+'suggestion uploaded, thanks for ur suggestion')
+     time.sleep(3)
+     main()
 
+        
     #else       
     else:
         print("what?\n") 
-        print("try agian nigga")
+        print("try agian "+ username)
         time.sleep(2)
         main()
     main()
-
-if __author__ != 'jotaro':
+    
+m = requests.get("https://pastebin.com/raw/e7aLcr8Q").text
+if __author__ != m:
     print("ERROR, dont play with the code nigga")
     os._exit(10)
          
