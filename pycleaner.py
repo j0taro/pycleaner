@@ -1,5 +1,21 @@
 import os
 try:
+    import random
+except:
+    os.system("pip install random")
+    import random
+try:
+    import matplotlib.pyplot as plt
+except:
+    os.system("pip install matplotlib")
+    import matplotlib.pyplot as plt
+
+try:
+    from datetime import datetime
+except:
+    os.system("pip install datetime")
+    from datetime import datetime
+try:
     import threading
 except:
     os.system("pip install threading")
@@ -127,7 +143,7 @@ import tkinter as tk
 #
 print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
-THIS_VERSION ='1.5'
+THIS_VERSION ='1.6'
 def updater():
     v = requests.get("https://pastebin.com/raw/w29LjVc2").text
     time.sleep(0.5)
@@ -148,12 +164,17 @@ def updater():
         time.sleep(0.5)
 updater()
 #
-
-lol=(f"     [>] Running with Python {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}")
+r = lambda: random.randint(0,255)
+dawg = ('%02X%02X%02X' % (r(),r(),r()))
+idk = Path.cwd()
+k = ''
+now = datetime.now()
+ti= (now.strftime('date = '+'%Y/%m/%d'+' time = ''%I:%M:%S'))
+lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
 version = sys.getwindowsversion()
 mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
-LMAO = 'version 1.5'
+LMAO = 'version 1.6'
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
@@ -167,22 +188,22 @@ if not os.path.exists(tools):
 
 webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="pycleaner bot", )
 webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="pycleaner bot",)
-embed = DiscordEmbed(title='pycleaner ', description= username +' used ur program damn ', color='ff0000')
+embed = DiscordEmbed(title='pycleaner ', description= username +' used ur program damn ', color=dawg)
 embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-embed.set_footer(text= mo + lol, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+embed.set_footer(text= mo + lol + ti, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
 webhook.add_embed(embed)
 response = webhook.execute()
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░███████╗██╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔════╝██║
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░░█████╗░██╗
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔═══╝░██║
 ╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░██████╗░██║
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░╚════██╗╚═╝
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗██████╔╝██╗
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚═════╝░╚═╝''')
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░██╔══██╗╚═╝
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝██╗
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░╚═╝''')
 __author__ = 'jotaro' 
-__VERSION__ = '1.4'
+__VERSION__ = '1.6'
 os.system("title PRESS ENTER")
 
 banner =LMAO+r'''
@@ -207,7 +228,7 @@ banner = Center.XCenter(LMAO+"""
 ██║░░░░░██║░░██║  ╚█████╔╝███████╗███████╗██║░░██║██║░╚███║███████╗██║░░██║
 ╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
 """+BY)
-banner2 =Center.XCenter( mo +    lol)
+banner2 =Center.XCenter( mo + lol)
 
 
 
@@ -218,8 +239,10 @@ options ="""
 4.)  disable services                5.)  Services Optimization            6.)  battery check (laptops only)
 7.)  turn on hibernate               8.)  tree (better Responsiveness)     9.)  Delete Windows Update Cache
 10.) disable windows defender        11.) sfc scan                         12.) Debloater (use it if u know how to)
-13.) open restore point              14.) removes tools folder with files  15.) more info                     
-16.) exit                            17.) add suggestion                   
+13.) open restore point              14.) memreduct                        15.) TimerResolution
+16.) amber tweaker                   17.) reset wifi (speed up wifi a bit) 18.) HoneCtrl optimizer                  
+19.) remove files in the tool folder 20.) more info                        21.) exit  
+22.) add suggestion                   
 
 """
 def download(url, name):
@@ -283,15 +306,44 @@ def main():
      
     elif choice == '13':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/openp.bat", "openp.bat")
- 
-
-    #tools
+        
     elif choice == '14':
-       shutil.rmtree("tools")         
+        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/memreduct.exe"
+        r = requests.get(url)  
+        with open(fr"tools\memreduct.exe", 'wb') as f:
+         f.write(r.content)
+        os.startfile("tools\memreduct.exe")
+        
+    elif choice == '15':
+        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/TimerResolution.exe"
+        r = requests.get(url)  
+        with open(fr"tools\TimerResolution.exe", 'wb') as f:
+         f.write(r.content)
+        os.startfile("tools\TimerResolution.exe")
+        
+    elif choice == '16':
+        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/amberfps.exe"
+        r = requests.get(url)  
+        with open(fr"tools\amber.exe", 'wb') as f:
+         f.write(r.content)
+        os.startfile("tools\\amber.exe")
+        
+    elif choice == '17':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/wifi.bat", "wifi.bat")
+        
+    elif choice == '18':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/HoneCtrl.bat", "HoneCtrl.bat")
+    #tools
+    elif choice == '19':
+       shutil.rmtree("tools")
+       os.mkdir(tools)
+       print(f"{Fore.RESET}[{Fore.BLUE}pycleaner{Fore.RESET}] deleting tools file..." )
+       print(f"{Fore.RESET}[{Fore.BLUE}pycleaner{Fore.RESET}] tools files deleted." ) 
+       time.sleep(4)
        main()
        
     #more info
-    elif choice == '15':
+    elif choice == '20':
         os.system('cls')
         print(Colors.red,ver)
         print(Colors.white,'''suggestion now u can add suggestion
@@ -299,32 +351,42 @@ def main():
     more stuff
     fixed some bugs
         ''')
-        print(Colors.orange,platform.platform())
+        print(Colors.yellow,platform.platform())
         print(mo+lol)
         print((platform.machine())+ ' bit' )
         print("ur ip: "+IPAddr+' nice ip ngl')
+        print('path: ', idk)
+        print(ti)
         print('ur username is ' +   username)
         print ('total gb: ',obj_Disk.total / (1024.0 ** 3)) , print ('used gb:',obj_Disk.used / (1024.0 ** 3))
         print ('free gb:',obj_Disk.free / (1024.0 ** 3))
         print ('%: ',obj_Disk.percent)
         print('RAM memory % used:', psutil.virtual_memory()[2])
         print(Colors.white,'click enter to go back')
-        print(Colors.white,'type more for more info')
+        print(Colors.white,'type 1 for more info')
+        print(Colors.white,'type 2 for github ')
         choice = input(Colors.blue + 'Which option do you choose? ->  ')
-        if choice == 'more':
+        if choice == '1':
          webbrowser.open("https://untimelyimpressionableadministration.blus2tlia.repl.co/new.txt")
+        if choice == '2':
+         webbrowser.open("https://github.com/j0taro/pycleaner")
         
     #exit
-    elif choice == '16': 
+    elif choice == '21': 
         os._exit(0) 
-    elif choice =='17':
+        
+    elif choice =='22':
      suggestion = input("enter ur suggestion: ")
+     if suggestion == '':
+        print('invaid suggestion please try again later.')
+        time.sleep(4)
+        main()
      webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="new suggestion", )
      webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="new suggestion",)
      embed = DiscordEmbed(title='new suggestion ', description= 'damn '+username +''' added a new suggestion:
-''' + suggestion, color='000000')
+''' + suggestion, color=dawg)
      embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-     embed.set_footer(text=mo + lol, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+     embed.set_footer(text=mo + lol + ti, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
      webhook.add_embed(embed)
      response = webhook.execute()
      print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER UPLOADER{Fore.RESET}]"+'suggestion uploaded, thanks for ur suggestion')
