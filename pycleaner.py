@@ -1,3 +1,4 @@
+
 import os
 try:
     import time,os,sys
@@ -169,7 +170,7 @@ if os.path.isfile(file_path):
 #
 print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
-THIS_VERSION ='1.6'
+THIS_VERSION ='1.7'
 def updater():
     v = requests.get("https://pastebin.com/raw/w29LjVc2").text
     time.sleep(0.5)
@@ -200,7 +201,7 @@ lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}
 version = sys.getwindowsversion()
 mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
-LMAO = 'version 1.6'
+LMAO = 'version 1.7'
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
@@ -223,14 +224,14 @@ print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░░█████╗░██╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔═══╝░██║
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░██████╗░██║
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░██╔══██╗╚═╝
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝██╗
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░╚═╝''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░███████╗
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░╚════██║
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░░░░░██╔╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░░░░██╔╝░
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░░██╔╝░░
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░╚═╝░░░''')
 __author__ = 'jotaro' 
-__VERSION__ = '1.6'
+__VERSION__ = '1.7'
 os.system("title PRESS ENTER")
 
 banner =LMAO+r'''
