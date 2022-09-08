@@ -281,7 +281,8 @@ def download(url, name):
 # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
 
 def main():
-    path_to_file = fr'C:\Users\{username}\AppData\Roaming\{username}PYCLEANER.txt'
+    os.system('cls')
+    path_to_file = fr'C:\Users\{username}\AppData\Roaming\{username} PYCLEANER.txt'
     path = Path(path_to_file)
     if path.is_file():
      fr()
@@ -300,14 +301,12 @@ def main():
    
      Please enter {Fore.RESET}{Fore.RED}"i agree"{Fore.RESET}{Fore.BLUE}  without quotes to continue: ''')
     ong = 'i agree'
-    x = input('>:')
+    x = input(f'>:{Fore.RED}')
     if x != ong :
-     print('error try again later')
-     time.sleep(4)
-     exit(4)
+     main()
     if x == ong :
      print('fr?')
-     with open(fr'C:\Users\{username}\AppData\Roaming\{username}PYCLEANER.txt', 'w') as f:
+     with open(fr'C:\Users\{username}\AppData\Roaming\{username} PYCLEANER.txt', 'w') as f:
       f.write('PYCLEANER STUFF, DELETE IT IF U WANT BUT THE DISCLAIMER WILL REOPEN EVERYTIME U DELETE IT FR')
      os.system('cls')
      fr()
