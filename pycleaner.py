@@ -13,7 +13,7 @@ def typingPrint(text):
 try:
     from colorama import Fore
 except:
-    os.system("pip install Fore")
+    os.system("pip install colorama")
     from colorama import Fore
 print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''please wait...''')
 print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''checking requirements''')
