@@ -16,8 +16,7 @@ except:
     os.system("pip install Fore")
     from colorama import Fore
 print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''please wait...''')
-typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''checking requirements
-''')
+print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''checking requirements''')
 try:
     import random
 except:
@@ -170,7 +169,7 @@ if os.path.isfile(file_path):
 #
 print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
-THIS_VERSION ='1.7'
+THIS_VERSION ='1.8'
 def updater():
     v = requests.get("https://pastebin.com/raw/w29LjVc2").text
     time.sleep(0.5)
@@ -195,13 +194,14 @@ r = lambda: random.randint(0,255)
 dawg = ('%02X%02X%02X' % (r(),r(),r()))
 idk = Path.cwd()
 k = ''
+ong = '"'
 now = datetime.now()
 ti= (now.strftime('date = '+'%Y/%m/%d'+' time = ''%I:%M:%S'))
 lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
 version = sys.getwindowsversion()
 mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
-LMAO = 'version 1.7'
+LMAO = 'version 1.8'
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
@@ -220,18 +220,18 @@ embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgu
 embed.set_footer(text= mo + lol + ti, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
 webhook.add_embed(embed)
 response = webhook.execute()
-print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'done')
+typingPrint(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░███████╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░╚════██║
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░░░░░██╔╝
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░░░░██╔╝░
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░░██╔╝░░
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░╚═╝░░░''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░░█████╗░
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔══██╗
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░╚█████╔╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░██╔══██╗
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
 __author__ = 'jotaro' 
-__VERSION__ = '1.7'
+__VERSION__ = '1.8'
 os.system("title PRESS ENTER")
 
 banner =LMAO+r'''
@@ -269,101 +269,140 @@ options =f"""
 {Fore.RESET}{Fore.RED}10.){Fore.RESET}{Fore.GREEN} disable windows defender        {Fore.RESET}{Fore.RED}11.){Fore.RESET}{Fore.GREEN} sfc scan                         {Fore.RESET}{Fore.RED}12.){Fore.RESET}{Fore.GREEN} Debloater (use it if u know how to)
 {Fore.RESET}{Fore.RED}13.){Fore.RESET}{Fore.GREEN} open restore point              {Fore.RESET}{Fore.RED}14.){Fore.RESET}{Fore.GREEN} memreduct                        {Fore.RESET}{Fore.RED}15.){Fore.RESET}{Fore.GREEN} TimerResolution
 {Fore.RESET}{Fore.RED}16.){Fore.RESET}{Fore.GREEN} amber tweaker                   {Fore.RESET}{Fore.RED}17.){Fore.RESET}{Fore.GREEN} reset wifi (speed up wifi a bit) {Fore.RESET}{Fore.RED}18.){Fore.RESET}{Fore.GREEN} HoneCtrl optimizer                  
-{Fore.RESET}{Fore.RED}19.){Fore.RESET}{Fore.GREEN} remove files in the tool folder {Fore.RESET}{Fore.RED}20.){Fore.RESET}{Fore.GREEN} more info                        {Fore.RESET}{Fore.RED}21.){Fore.RESET}{Fore.GREEN} exit  
-{Fore.RESET}{Fore.RED}22.){Fore.RESET}{Fore.GREEN} add suggestion                   
+{Fore.RESET}{Fore.RED}19.){Fore.RESET}{Fore.GREEN} O & O shutup (antispy)          {Fore.RESET}{Fore.RED}20.){Fore.RESET}{Fore.GREEN} remove files in the tool folder  {Fore.RESET}{Fore.RED}21.){Fore.RESET}{Fore.GREEN} more info                       
+{Fore.RESET}{Fore.RED}22.){Fore.RESET}{Fore.GREEN} exit                            {Fore.RESET}{Fore.RED}23.){Fore.RESET}{Fore.GREEN} add suggestion                   
 
 """
 def download(url, name):
     response =  requests.get(url)
     open(tools+name, "w").write(response.text)
     os.startfile(tools+name)
-    
-    # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
+      
+# THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
 
 def main():
-    os.system('cls')
-    print(Colorate.Vertical(Colors.red_to_blue, banner3))
-    print(Colorate.Vertical(Colors.blue_to_red, banner2))
-    print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
-    choice = input(Colors.blue + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
-    
+    path_to_file = fr'C:\Users\{username}\AppData\Roaming\{username}PYCLEANER.txt'
+    path = Path(path_to_file)
+    if path.is_file():
+     fr()
+    else:
+     print(Colors.blue,fr'''{Fore.YELLOW}    fr cleaner is a free and open-source desktop utility
+     {Fore.YELLOW}made t o improve your day-to-day productivity
+     {Fore.RESET}{Fore.RED}WARNING!{Fore.RESET}{Fore.BLUE}
+     Please note that we cannot guarantee an FPS boost from applying our optimizations,
+     every system + configuration is different.
+     Everything is {Fore.RESET}{Fore.RED}USE IT ON YOUR OWN RISK{Fore.RESET}{Fore.BLUE}, we are {Fore.RESET}{Fore.RED}NOT LIABLE{Fore.RESET}{Fore.BLUE} if you damage your system in any way 
+     (ex. not following the disclaimers carefully).
+     If you don't know what a tweak is, do not use it and contact {Fore.RESET}{Fore.RED}jotaro#0005{Fore.RESET}{Fore.BLUE}  to receive more assistance.
+     Even though we have an restore point feature{Fore.RESET}{Fore.GREEN}(option 1){Fore.RESET}{Fore.BLUE} 
+     highly recommend making a manual restore point before running.
+     {Fore.RESET}{Fore.RED}PLEASE USE THE TOOLS THAT YOU KNOW HOW TO USE THEM{Fore.RESET}{Fore.BLUE}  
+   
+     Please enter {Fore.RESET}{Fore.RED}"i agree"{Fore.RESET}{Fore.BLUE}  without quotes to continue: ''')
+    ong = 'i agree'
+    x = input('>:')
+    if x != ong :
+     print('error try again later')
+     time.sleep(4)
+     exit(4)
+    if x == ong :
+     print('fr?')
+     with open(fr'C:\Users\{username}\AppData\Roaming\{username}PYCLEANER.txt', 'w') as f:
+      f.write('PYCLEANER STUFF, DELETE IT IF U WANT BUT THE DISCLAIMER WILL REOPEN EVERYTIME U DELETE IT FR')
+     os.system('cls')
+     fr()
+def fr():
+     os.system('cls')
+     print(Colorate.Vertical(Colors.red_to_blue, banner3))
+     print(Colorate.Vertical(Colors.blue_to_red, banner2))
+     print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
+     choice = input(Colors.blue + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
     #restore point
-    if choice == '1':
+     if choice == '1':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
     #temp
-    if choice == '2':
+     if choice == '2':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/temp.bat", "temp_cleaner.bat")
         
     #log cleaner
-    elif choice == '3':
+     elif choice == '3':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/log%20cleaner.bat", "log_cleaner.bat")
        
     #disable services
-    elif choice == "4":
+     elif choice == "4":
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/services.bat", "disable_services.bat")
   
     #service_optimizer
-    elif choice == "5":
+     elif choice == "5":
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/optimization.bat", "service_optimizer.bat")
 
     #battery_check
-    elif choice == '6':
+     elif choice == '6':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/battery.bat", "battery_check.bat")
  
     #hibernate
-    elif choice == '7':
+     elif choice == '7':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/hibernate.bat", "hibernate.bat")
 
     #tree
-    elif choice == '8':
+     elif choice == '8':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/tree.bat", "tree.bat")
 
     #windows update
-    elif choice == '9':
+     elif choice == '9':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/update.cmd", "delete_windows_update_cache.cmd")
 
     #disable_services
-    elif choice == '10':
+     elif choice == '10':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/def.reg", "disable_windows_defender.reg")
     #sfc scan
-    elif choice == '11':
+     elif choice == '11':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/sfc.bat", "sfc.bat")
        
     #debloater   
-    elif choice == '12':
+     elif choice == '12':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Debloater.bat", "Debloater.bat")
      
-    elif choice == '13':
+     elif choice == '13':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/openp.bat", "openp.bat")
         
-    elif choice == '14':
+     elif choice == '14':
         url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/memreduct.exe"
         r = requests.get(url)  
         with open(fr"tools\memreduct.exe", 'wb') as f:
          f.write(r.content)
         os.startfile("tools\memreduct.exe")
         
-    elif choice == '15':
+     elif choice == '15':
         url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/TimerResolution.exe"
         r = requests.get(url)  
         with open(fr"tools\TimerResolution.exe", 'wb') as f:
          f.write(r.content)
         os.startfile("tools\TimerResolution.exe")
         
-    elif choice == '16':
+     elif choice == '16':
         url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/amberfps.exe"
         r = requests.get(url)  
         with open(fr"tools\amber.exe", 'wb') as f:
          f.write(r.content)
         os.startfile("tools\\amber.exe")
         
-    elif choice == '17':
+     elif choice == '17':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/wifi.bat", "wifi.bat")
         
-    elif choice == '18':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/HoneCtrl.bat", "HoneCtrl.bat")
+        
+     elif choice == '18':
+        download("https://github.com/auraside/HoneCtrl/releases/latest/download/HoneCtrl.Bat", "HoneCtrl.bat")
+        
+     elif choice == '19':
+        url = "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe"
+        r = requests.get(url)  
+        with open(fr"tools\OOSU10.exe", 'wb') as f:
+         f.write(r.content)
+        os.startfile("tools\\OOSU10.exe")
+
     #tools
-    elif choice == '19':
+     elif choice == '20':
        shutil.rmtree("tools")
        os.mkdir(tools)
        print(f"{Fore.RESET}[{Fore.BLUE}pycleaner{Fore.RESET}] deleting tools file..." )
@@ -372,7 +411,7 @@ def main():
        main()
        
     #more info
-    elif choice == '20':
+     elif choice == '21':
         os.system('cls')
         print(Colors.blue,ver)
         print(Colors.red,platform.platform())
@@ -391,37 +430,34 @@ def main():
         print ('%: ',obj_Disk.percent)
         print('RAM memory % used:', psutil.virtual_memory()[2])
         print(Colors.purple,'hit enter to go back')
-        print(Colors.green,'type 1 for more info')
-        print(Colors.red,'type 2 for github ')
+        print(Colors.orange,'type 1 for github ')
         choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
-         webbrowser.open("https://untimelyimpressionableadministration.blus2tlia.repl.co/new.txt")
-        if choice == '2':
          webbrowser.open("https://github.com/j0taro/pycleaner")
         
     #exit
-    elif choice == '21': 
+     elif choice == '22': 
         os._exit(0) 
         
-    elif choice =='22':
-     suggestion = input(f"enter ur suggestion:{Fore.RED} ")
-     if suggestion == '':
+     elif choice =='23':
+      suggestion = input(f"enter ur suggestion:{Fore.RED} ")
+      if suggestion == '':
         print('invaid suggestion please try again later.')
         time.sleep(4)
         main()
-     webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="new suggestion", )
-     webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="new suggestion",)
-     embed = DiscordEmbed(title='new suggestion ', description= 'damn '+username +''' added a new suggestion:
-''' + suggestion, color=dawg)
-     embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-     embed.set_footer(text=mo + lol + ti, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
-     webhook.add_embed(embed)
-     response = webhook.execute()
-     typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER UPLOADER{Fore.RESET}]"+'suggestion uploaded, thanks for ur suggestion')
-     time.sleep(0)
-     main()
+      webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', username="new suggestion", )
+      webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content='<@822132948769177620>', username="new suggestion",)
+      embed = DiscordEmbed(title='new suggestion ', description= 'damn '+username +''' added a new suggestion:
+ ''' + ong + suggestion+ong, color=dawg)
+      embed.set_author(name='https://github.com/j0taro/pycleaner', url='https://i.imgur.com/coJFefW.png', icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+      embed.set_footer(text=mo + lol + ti, icon_url='https://raw.githubusercontent.com/nightmare324/pycleaner/main/coJFefW.png')
+      webhook.add_embed(embed)
+      response = webhook.execute()
+      typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER UPLOADER{Fore.RESET}]"+ong+suggestion+ong+' has been uploaded, thanks for ur suggestion')
+      time.sleep(0)
+      main()
      
-    elif choice == 'h': 
+     elif choice == 'h': 
         h = input(Colors.blue + f'are you sure you want to hibernate? y,n :{Fore.RED}')
         if h == 'y':
          typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'hibernating in 3..')
@@ -436,7 +472,7 @@ def main():
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'ok going back')
          time.sleep(2)
          
-    elif choice == 's': 
+     elif choice == 's': 
         shut = input(Colors.blue + f'are you sure you want to shutdown? y,n :{Fore.RED}')
         if shut == 'y':
          typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'shutting down in 3..')
@@ -454,7 +490,7 @@ def main():
          time.sleep(4)
          main()
          
-    elif choice == 'r': 
+     elif choice == 'r': 
         res = input(Colors.blue + f'are you sure you want to restart? y,n :{Fore.RED}')
         if res == 'y':
          typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'restarting in 3..')
@@ -472,39 +508,39 @@ def main():
          time.sleep(4)
          main()
          
-    elif choice == 're': 
+     elif choice == 're': 
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'soft restarting in 2 secounds please wait')
          time.sleep(2)
          download("https://untimelyimpressionableadministration.blus2tlia.repl.co/softr.bat", "softr.bat") 
          main()
          
-    elif choice == 'dev':
-     key = input(Colors.blue + f'whats the key? -> {Fore.RED} ')
-     op = requests.get('https://pastebin.com/raw/qBZX4xR4').text
-     if key != op:
+     elif choice == 'dev':
+      key = input(Colors.blue + f'whats the key? -> {Fore.RED} ')
+      op = requests.get('https://pastebin.com/raw/qBZX4xR4').text
+      if key != op:
         print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER key{Fore.RESET}]"+'wrong key!!!!!!!!!')
         time.sleep(4)
         main()
-     if key == op:
-      print('1 = pastebin')
-      print('2 = github')
-      print('3 = large generator')
-      print('4 = replit')
-      print('5 = all')
-     ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
-     if ff == '1':
-       webbrowser.open("https://pastebin.com/w29LjVc2")
-     if ff == '2':
-       webbrowser.open("https://github.com/j0taro/pycleaner/blob/main/pycleaner.py") 
-     if ff == '3': 
-       webbrowser.open("https://fsymbols.com/generators/tarty/") 
-     if ff == '4':
-       webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
-     if ff == '5':
-       webbrowser.open("https://fsymbols.com/generators/tarty/") 
-       webbrowser.open("https://github.com/j0taro/pycleaner/blob/main/pycleaner.py") 
-       webbrowser.open("https://pastebin.com/w29LjVc2")          
-     if ff !='1' '2' '3' '4' '5':
+      if key == op:
+        print('1 = pastebin')
+        print('2 = github')
+        print('3 = large generator')
+        print('4 = replit')
+        print('5 = all')
+        ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
+      if ff == '1':
+        webbrowser.open("https://pastebin.com/w29LjVc2")
+      if ff == '2':
+        webbrowser.open("https://github.com/j0taro/pycleaner/blob/main/pycleaner.py") 
+      if ff == '3': 
+        webbrowser.open("https://fsymbols.com/generators/tarty/") 
+      if ff == '4':
+        webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
+      if ff == '5':
+        webbrowser.open("https://fsymbols.com/generators/tarty/") 
+        webbrowser.open("https://github.com/j0taro/pycleaner/blob/main/pycleaner.py") 
+        webbrowser.open("https://pastebin.com/w29LjVc2")          
+      if ff !='1' '2' '3' '4' '5':
        typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'invaild option please try again later')
        time.sleep(0)
        main()
@@ -512,13 +548,15 @@ def main():
       
         
     #else       
-    else:
+     else:
         print("what?\n") 
         typingPrint("try agian "+ username)
         time.sleep(0)
         main()
-    main()
+     main()
     
+
+
 m = requests.get("https://pastebin.com/raw/e7aLcr8Q").text
 if __author__ != m:
     typingPrint("ERROR, dont play with the code dumbass")
