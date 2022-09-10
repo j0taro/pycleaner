@@ -254,7 +254,9 @@ bannerfr =LMAO+r'''
 ██║░░░░░██║░░██║  ╚█████╔╝███████╗███████╗██║░░██║██║░╚███║███████╗██║░░██║
 ╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝
 '''+ BY + '                  welcome, '+username  
-
+System.Size(120, 30)
+System.Clear()
+Anime.Fade(Center.XCenter(bannerfr), Colors.rainbow, Colorate.Vertical, interval=0.025, enter=True)
 
 
 banner = Center.XCenter(LMAO+"""
@@ -326,9 +328,6 @@ def main():
      fr()
 
 def fr():
-     System.Size(120, 30)
-     System.Clear()
-     Anime.Fade(Center.XCenter(bannerfr), Colors.rainbow, Colorate.Vertical, interval=0.025, enter=True)
      os.system("title  Hello, "+   username)
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
