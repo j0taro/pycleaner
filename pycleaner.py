@@ -175,7 +175,7 @@ except Exception as er:
 print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
 #auto update
 try:
- THIS_VERSION ='1.8'
+ THIS_VERSION ='1.9'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
