@@ -21,7 +21,7 @@ echo dont forget to check add to path
 curl -L "https://i.imgur.com/cE7DzJ7.jpeg" -o C:\Users\%username%\AppData\Roaming\random.png
 start C:\Users\%username%\AppData\Roaming\random.png
 curl -L "https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe" -O
-start /W "python-3.10.7-amd64.exe"
+start /W python-3.10.7-amd64.exe
 goto ong
 pause
 exit
