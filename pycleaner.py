@@ -1,3 +1,4 @@
+
 import os
 try:
     from humanize import naturalsize
@@ -301,10 +302,11 @@ banner = Center.XCenter(LMAO+"""
 """+BY)
 banner2 =Center.XCenter(mo + lol)
 
+pop=(f'''
+                           {Fore.RESET}{Fore.RED}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.RED}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.RED}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.RED}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}''')
 
 
 options =f"""
-                      {Fore.RESET}{Fore.RED}h.){Fore.RESET} {Fore.RESET}{Fore.GREEN}hibernate{Fore.RESET}    {Fore.RESET}{Fore.RED}s.){Fore.RESET} {Fore.RESET}{Fore.GREEN}shutdown{Fore.RESET}    {Fore.RESET}{Fore.RED}r.){Fore.RESET} {Fore.RESET}{Fore.GREEN}restart{Fore.RESET}    {Fore.RESET}{Fore.RED}re.){Fore.RESET} {Fore.RESET}{Fore.GREEN}restart explorer{Fore.RESET}         
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
 {Fore.RESET}{Fore.RED} 1.){Fore.RESET}{Fore.GREEN}  Create a restore point          {Fore.RESET}{Fore.RED}2.){Fore.RESET}{Fore.GREEN}  Temp cleaner                     {Fore.RESET}{Fore.RED}3.){Fore.RESET}{Fore.GREEN}  Log cleaner
 {Fore.RESET}{Fore.RED} 4.){Fore.RESET}{Fore.GREEN}  Disable services                {Fore.RESET}{Fore.RED}5.){Fore.RESET}{Fore.GREEN}  Services Optimization            {Fore.RESET}{Fore.RED}6.){Fore.RESET}{Fore.GREEN}  Battery check (laptops only)
@@ -323,7 +325,7 @@ options =f"""
 {Fore.RESET}{Fore.RED} 43.){Fore.RESET}{Fore.GREEN} Increase System Responsiveness  {Fore.RESET}{Fore.RED}44.){Fore.RESET}{Fore.GREEN} Lower Input Delay                {Fore.RESET}{Fore.RED}45.){Fore.RESET}{Fore.GREEN} Memory Tweaks
 {Fore.RESET}{Fore.RED} 46.){Fore.RESET}{Fore.GREEN} NoLazyMode                      {Fore.RESET}{Fore.RED}47.){Fore.RESET}{Fore.GREEN} Power Tweaks                     {Fore.RESET}{Fore.RED}48.){Fore.RESET}{Fore.GREEN} Smoother windows 
 {Fore.RESET}{Fore.RED} 49.){Fore.RESET}{Fore.GREEN} Disable UAC                     {Fore.RESET}{Fore.RED}50.){Fore.RESET}{Fore.GREEN} Adwcleaner                       {Fore.RESET}{Fore.RED}51.){Fore.RESET}{Fore.GREEN} RAM Optimization (risky cuz automatic)  
-{Fore.RESET}{Fore.RED} 52.){Fore.RESET}{Fore.GREEN} More info                       {Fore.RESET}{Fore.RED}53.){Fore.RESET}{Fore.GREEN} Exit                             {Fore.RESET}{Fore.RED}54.){Fore.RESET}{Fore.GREEN} Add suggestion   
+{Fore.RESET}{Fore.BLUE} 52.){Fore.RESET}{Fore.GREEN} More info                       {Fore.RESET}{Fore.BLUE}53.){Fore.RESET}{Fore.GREEN} Exit                             {Fore.RESET}{Fore.BLUE}54.){Fore.RESET}{Fore.GREEN} Add suggestion   
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
 """
 # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
@@ -383,8 +385,8 @@ def fr():
      os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}] ")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
-     print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
-     choice = input(Colors.blue + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
+     print(Colorate.Vertical(Colors.rainbow, banner + pop + options, 2))
+     choice = input(Colors.orange + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
     #restore point
      if choice == '1':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
