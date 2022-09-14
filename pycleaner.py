@@ -370,9 +370,17 @@ def main():
 
 def fr():
      file_count = sum(len(files) for _, _, files in os.walk(r'tools'))
-     size = os.stat(r'tools').st_size
-     x = naturalsize(size)
-     os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{x}] ")
+     file_count = sum(len(files) for _, _, files in os.walk(r'tools'))
+     HOME_FOLDER = r'tools' 
+     directory_size = 0    
+     fsizedicr = {'MB': float(1)/(1024*1024)}
+     for (path, dirs, files) in os.walk(HOME_FOLDER):
+      for file in files:
+        filename = os.path.join(path, file)
+        directory_size += os.path.getsize(filename)
+     for key in fsizedicr:       
+      size = (str(round(fsizedicr[key]*directory_size, 2)) + " " + key)
+     os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}] ")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
      print(Colorate.Vertical(Colors.rainbow, banner + options, 2))
