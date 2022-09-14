@@ -385,7 +385,7 @@ def fr():
      os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}] ")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
-     print(Colorate.Vertical(Colors.rainbow, banner + pop + options, 2))
+     print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2))
      choice = input(Colors.orange + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
     #restore point
      if choice == '1':
