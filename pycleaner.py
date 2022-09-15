@@ -194,7 +194,7 @@ except Exception as er:
 os.system("title Checking for updates")
 #auto update
 try:
- vers ='2.1'
+ vers ='2.2'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
@@ -237,7 +237,7 @@ lol=(f"     [>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}
 version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
 BY = 'By jotaro'
-LMAO = 'Version 2.1'
+LMAO = 'Version 2.2'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
             data = req.json()
@@ -270,10 +270,10 @@ print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░░███╗░░
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░░████║░░
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░██╔██║░░
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░╚═╝██║░░
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░██████╗░
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░╚════██╗
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░░███╔═╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══╝░░
 ░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗███████╗
 ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚══════╝''')
 
