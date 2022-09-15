@@ -262,7 +262,7 @@ __author__ = 'jotaro'
 #---------------------------------------------------------------------------------------------------
 #i just wanna know how many people ran my shit dont spam my webhook thats gay tho.
 webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
-embed = DiscordEmbed(title='fr optimizer ', description = username +' used ur program damn '+'('+str(ramg) +')'+' gb ram', color=dawg)
+embed = DiscordEmbed(title='fr optimizer ', description = username +' used ur program damn '+'('+str(ramg) +')'+' gb ram '+vers, color=dawg)
 embed.set_footer(text= mo + lol +' '+ti)
 webhook.add_embed(embed)
 response = webhook.execute()
@@ -303,7 +303,7 @@ banner = Center.XCenter(LMAO+"""
 banner2 =Center.XCenter(mo + lol)
 
 pop=(f'''
-                           {Fore.RESET}{Fore.RED}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.RED}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.RED}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.RED}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}''')
+                           {Fore.RESET}{Fore.CYAN}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.CYAN}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.CYAN}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.CYAN}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}''')
 
 
 options =f"""
@@ -318,7 +318,7 @@ options =f"""
 {Fore.RESET}{Fore.RED} 22.){Fore.RESET}{Fore.GREEN} O & O shutup (antispy)          {Fore.RESET}{Fore.RED}23.){Fore.RESET}{Fore.GREEN} Open disk cleanup                {Fore.RESET}{Fore.RED}24.){Fore.RESET}{Fore.GREEN} Registry tweaks(op)             
 {Fore.RESET}{Fore.RED} 25.){Fore.RESET}{Fore.GREEN} BCDTweaks                       {Fore.RESET}{Fore.RED}26.){Fore.RESET}{Fore.GREEN} Optimize ALL Windows Settings    {Fore.RESET}{Fore.RED}27.){Fore.RESET}{Fore.GREEN} Remove files in the tool folder 
 {Fore.RESET}{Fore.RED} 28.){Fore.RESET}{Fore.GREEN} Sytem configuration             {Fore.RESET}{Fore.RED}29.){Fore.RESET}{Fore.GREEN} Azurite setup                    {Fore.RESET}{Fore.RED}30.){Fore.RESET}{Fore.GREEN} Ultimate Power Plan (drains battery)   
-{Fore.RESET}{Fore.RED} 31.){Fore.RESET}{Fore.GREEN} Disable Animations              {Fore.RESET}{Fore.RED}32.){Fore.RESET}{Fore.GREEN} CPU Optimization for Gameing     {Fore.RESET}{Fore.RED}33.){Fore.RESET}{Fore.GREEN} Disable Background Apps   
+{Fore.RESET}{Fore.RED} 31.){Fore.RESET}{Fore.GREEN} Disable Animations              {Fore.RESET}{Fore.RED}32.){Fore.RESET}{Fore.GREEN} CPU Optimization for Gaming     {Fore.RESET}{Fore.RED}33.){Fore.RESET}{Fore.GREEN} Disable Background Apps   
 {Fore.RESET}{Fore.RED} 34.){Fore.RESET}{Fore.GREEN} Disable Cortana                 {Fore.RESET}{Fore.RED}35.){Fore.RESET}{Fore.GREEN} Disable Full Screen Optimization {Fore.RESET}{Fore.RED}36.){Fore.RESET}{Fore.GREEN} Disable Game Bar 
 {Fore.RESET}{Fore.RED} 37.){Fore.RESET}{Fore.GREEN} Disable LargeSystemCache        {Fore.RESET}{Fore.RED}38.){Fore.RESET}{Fore.GREEN} Disable Memory Compression       {Fore.RESET}{Fore.RED}39.){Fore.RESET}{Fore.GREEN} Disable Mitigations  
 {Fore.RESET}{Fore.RED} 40.){Fore.RESET}{Fore.GREEN} Disable Power Throttling        {Fore.RESET}{Fore.RED}41.){Fore.RESET}{Fore.GREEN} Disable Game DVR                 {Fore.RESET}{Fore.RED}42.){Fore.RESET}{Fore.GREEN} GPU Tweaks 
@@ -340,7 +340,9 @@ def main():
     if path.is_file():
      fr()
     else:
-     print(Colors.blue,fr'''{Fore.YELLOW}    fr cleaner is a free and open-source desktop utility made by jotaro.
+     print(Colors.blue,fr'''
+     {Fore.RED}DISCLAIMER!
+     {Fore.YELLOW}fr cleaner is a free and open-source desktop utility made by jotaro.     
      {Fore.YELLOW}made to improve your day-to-day productivity.
      {Fore.YELLOW}this message will appear once.
      
