@@ -704,7 +704,7 @@ def fr():
         
      elif choice == '51':
       os.system("cls")
-      print(Colors.green,ramg + "gb RAM? y,n if not right it would be risky for ur pc")
+      print(ramg," gb RAM? y,n if not right it would be risky for ur pc")
       fr = input(" y,n >: ")
       if fr == ("n"):
        ramgb = input(" enter gb ram if ur not sure hit enter >: ")
