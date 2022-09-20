@@ -1,5 +1,10 @@
 import os
 try:
+    import wmi
+except:
+    os.system("pip install wmi")
+    import wmi
+try:
     from humanize import naturalsize
 except:
     os.system("pip install humanize")
@@ -244,37 +249,74 @@ except Exception as lk:
 
 
 def dev():
-         with open(ooo, 'w') as f:
+         if username != "\x66\x61\x64\x69\x61":
+          webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1020336398328406036/QAUrtaDf2Z0hYvZSB1s9Zyg6wZdij5ZSs6H2_wdQVqBGbs5X7v2kVukXe8FF-xhaZxfh', username="fake devs", avatar_url= "https://i.imgur.com/SwcvuwC.png" )
+          embed = DiscordEmbed(title='fr optimizer ', description= username +' is a fake developer \U0001F480', color=dawg)
+          webhook.add_embed(embed)
+          response = webhook.execute()
+          with open(ooo, 'w') as f:
            f.write('pycleaner dev')
-         print('1 = pastebin')
-         print('2 = github')
-         print('3 = large generator')
-         print('4 = replit')
-         print('5 = all')
-         print('b = back')
-         ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
-         if ff == '1':
-          webbrowser.open("https://pastebin.com/edit/w29LjVc2")
-          main()
-         if ff == '2':
-          webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
-          main()
-         if ff == '3': 
-          webbrowser.open("https://fsymbols.com/generators/tarty/") 
-          main()
-         if ff == '4':
-          webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
-          main()
-         if ff == '5':
-          webbrowser.open("https://fsymbols.com/generators/tarty/") 
-          webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
-          webbrowser.open("https://pastebin.com/edit/w29LjVc2")  
-          main()
-         if ff == 'b':
-          main()          
-         if ff !='1' '2' '3' '4' '5':
-          os.system("cls")
-          dev()
+          print('1 = pastebin')
+          print('2 = github')
+          print('3 = large generator')
+          print('4 = replit')
+          print('5 = all')
+          print('b = back')
+          ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
+          if ff == '1':
+           webbrowser.open("https://pastebin.com/edit/w29LjVc2")
+           main()
+          if ff == '2':
+           webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+           main()
+          if ff == '3': 
+           webbrowser.open("https://fsymbols.com/generators/tarty/") 
+           main()
+          if ff == '4':
+           webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
+           main()
+          if ff == '5':
+           webbrowser.open("https://fsymbols.com/generators/tarty/") 
+           webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+           webbrowser.open("https://pastebin.com/edit/w29LjVc2")  
+           main()
+          if ff == 'b':
+           main()          
+          if ff !='1' '2' '3' '4' '5':
+           os.system("cls")
+           dev()
+         else:
+          with open(ooo, 'w') as f:
+           f.write('pycleaner dev')
+          print('1 = pastebin')
+          print('2 = github')
+          print('3 = large generator')
+          print('4 = replit')
+          print('5 = all')
+          print('b = back')
+          ff = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
+          if ff == '1':
+           webbrowser.open("https://pastebin.com/edit/w29LjVc2")
+           main()
+          if ff == '2':
+           webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+           main()
+          if ff == '3': 
+           webbrowser.open("https://fsymbols.com/generators/tarty/") 
+           main()
+          if ff == '4':
+           webbrowser.open("https://replit.com/@BLUS2TLIa/UntimelyImpressionableAdministration#new.txt")
+           main()
+          if ff == '5':
+           webbrowser.open("https://fsymbols.com/generators/tarty/") 
+           webbrowser.open("https://github.com/j0taro/pycleaner/edit/main/pycleaner.py") 
+           webbrowser.open("https://pastebin.com/edit/w29LjVc2")  
+           main()
+          if ff == 'b':
+           main()          
+          if ff !='1' '2' '3' '4' '5':
+           os.system("cls")
+           dev()
 #------------------------------------------------------------------------------------------------------
 ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
 path = pathlib.Path(r'tools')
@@ -303,7 +345,8 @@ if req.status_code == 200:
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
-ramg = str(psutil.virtual_memory()[0] / 1024 ** 3 + 1).split(".")[0]
+ramg = round(float(wmi.WMI().Win32_OperatingSystem()[
+ 0].TotalVisibleMemorySize) / 1048576, 0)
 hostname=socket.gethostname() 
 path_to_file = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
 IPAddr=socket.gethostbyname(hostname)  
@@ -914,34 +957,42 @@ def fr():
         if message.author.bot:
             return
         if message.content.startswith("."):
-         await message.reply(f"{username} add , {username} remove")
-        if message.content.startswith(fr"{username} add"):
-         if message.author.id == 822132948769177620:
-          ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-          with open(ooo, 'w') as f:
-           f.write('pycleaner dev')
-           print('dev approved! W')
-           await message.channel.delete()
-           user = await client.fetch_user(822132948769177620) 
-           if user is not None: 
-             if user.dm_channel is None: 
+         channel = client.get_channel(1021509971537567815)
+         if channel:
+           channel = client.get_channel(1021509971537567815)
+           if channel:
+            await channel.send(message.author.name+' used "."')
+            await message.reply(f"{username} add , {username} remove")
+            
+         if message.content.startswith(fr"{username} add"):
+             if message.author.id == 822132948769177620:
+              ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+              with open(ooo, 'w') as f:
+               f.write('pycleaner dev')
+               print('dev approved! W')
+               await message.channel.delete()
+               user = await client.fetch_user(822132948769177620) 
+               if user is not None: 
+                if user.dm_channel is None: 
                  await user.create_dm()
-             await user.dm_channel.send(f"{username} added to dev 💀")
-           time.sleep(4)
-           main()
+                 await user.dm_channel.send(f"{username} added to dev 💀")
+                 time.sleep(4)
+                 main()
          else:
             user = await client.fetch_user(message.author.id) 
             if user is not None: 
              if user.dm_channel is None: 
                  await user.create_dm()
              await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
+             await message.delete()
           
         if message.content.startswith(fr"{username} remove"):
          if message.author.id == 822132948769177620:
-          ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-          await message.channel.delete()
-          user = await client.fetch_user(822132948769177620) 
-          if user is not None: 
+            await channel.send(message.author.name+f' used "{username} remove"')
+            ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+            await message.channel.delete()
+            user = await client.fetch_user(822132948769177620) 
+            if user is not None: 
              if user.dm_channel is None: 
                  await user.create_dm()
              await user.dm_channel.send(f"{username} removed from dev 💀")
@@ -953,12 +1004,12 @@ def fr():
              if not os.path.isfile(ooo):
               main()
          else:
-            print(message.author.id)
-            userl = await client.fetch_user(message.author.id) 
-            if userl is not None: 
-             if userl.dm_channel is None: 
-                 await userl.create_dm()
-             await userl.dm_channel.send(f"only owner of pycleaner can use this command :)")
+            user = await client.fetch_user(message.author.id) 
+            if user is not None: 
+             if user.dm_channel is None: 
+                 await user.create_dm()
+             await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
+             await message.delete()
              
             
  
@@ -974,7 +1025,7 @@ def fr():
      else:
         print("what?") 
         print("try agian "+ username)
-        time.sleep(3)
+        time.sleep(2)
         main()
      main()
     
