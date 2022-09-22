@@ -417,7 +417,7 @@ options =f"""
 {Fore.RESET}{Fore.RED} 19.){Fore.RESET}{Fore.GREEN} Check health                    {Fore.RESET}{Fore.RED}20.){Fore.RESET}{Fore.GREEN} Scan health                      {Fore.RESET}{Fore.RED}21.){Fore.RESET}{Fore.GREEN} Restore health  
 {Fore.RESET}{Fore.RED} 22.){Fore.RESET}{Fore.GREEN} O & O shutup (antispy)          {Fore.RESET}{Fore.RED}23.){Fore.RESET}{Fore.GREEN} Open disk cleanup                {Fore.RESET}{Fore.RED}24.){Fore.RESET}{Fore.GREEN} Registry tweaks(op)             
 {Fore.RESET}{Fore.RED} 25.){Fore.RESET}{Fore.GREEN} BCDTweaks                       {Fore.RESET}{Fore.RED}26.){Fore.RESET}{Fore.GREEN} Optimize ALL Windows Settings    {Fore.RESET}{Fore.RED}27.){Fore.RESET}{Fore.GREEN} Remove files in the tool folder 
-{Fore.RESET}{Fore.RED} 28.){Fore.RESET}{Fore.GREEN} Sytem configuration             {Fore.RESET}{Fore.RED}29.){Fore.RESET}{Fore.GREEN} Azurite setup                    {Fore.RESET}{Fore.RED}30.){Fore.RESET}{Fore.GREEN} Ultimate Power Plan (drains battery)   
+{Fore.RESET}{Fore.RED} 28.){Fore.RESET}{Fore.GREEN} Sytem configuration             {Fore.RESET}{Fore.RED}29.){Fore.RESET}{Fore.GREEN} optimizer                        {Fore.RESET}{Fore.RED}30.){Fore.RESET}{Fore.GREEN} Ultimate Power Plan (drains battery)   
 {Fore.RESET}{Fore.RED} 31.){Fore.RESET}{Fore.GREEN} Disable Animations              {Fore.RESET}{Fore.RED}32.){Fore.RESET}{Fore.GREEN} CPU Optimization for Gaming      {Fore.RESET}{Fore.RED}33.){Fore.RESET}{Fore.GREEN} Disable Background Apps   
 {Fore.RESET}{Fore.RED} 34.){Fore.RESET}{Fore.GREEN} Disable Cortana                 {Fore.RESET}{Fore.RED}35.){Fore.RESET}{Fore.GREEN} Disable Full Screen Optimization {Fore.RESET}{Fore.RED}36.){Fore.RESET}{Fore.GREEN} Disable Game Bar 
 {Fore.RESET}{Fore.RED} 37.){Fore.RESET}{Fore.GREEN} Disable LargeSystemCache        {Fore.RESET}{Fore.RED}38.){Fore.RESET}{Fore.GREEN} Disable Memory Compression       {Fore.RESET}{Fore.RED}39.){Fore.RESET}{Fore.GREEN} Disable Mitigations  
@@ -618,11 +618,11 @@ def fr():
         os.startfile("C:\Windows\System32\msconfig.exe")
 
      elif choice == '29':
-        url = "https://update.tweakcentral.net/azurite/Azurite%20Setup%201.1.7.exe"
+        url = "https://github.com/hellzerg/optimizer/releases/download/13.9/Optimizer-13.9.exe"
         r = requests.get(url)  
-        with open(fr"tools\Azurite%20Setup%201.1.7.exe", 'wb') as f:
+        with open(fr"tools\optimizer.exe", 'wb') as f:
          f.write(r.content)
-        os.startfile("tools\\Azurite%20Setup%201.1.7.exe")
+        os.startfile("tools\optimizer.exe")
 
      elif choice == '30':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/powerplan.bat", "powerplan.bat")
