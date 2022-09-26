@@ -498,7 +498,7 @@ def fr():
      path = Path(ooo)
      if path.is_file():
       os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}]  A DEVELOPER!! ")
-     choice = input(Colors.orange + 'Which option do you choose '+ username+f'? ->{Fore.RED}  ')
+     choice = input(Colors.red + 'Which option do you choose '+ username+f'? ->{Fore.GREEN}  ')
     #restore point
      if choice == '1':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
@@ -777,9 +777,9 @@ def fr():
     #more info
      elif choice == '52':
         os.system('cls')
-        print(Colorate.Vertical(Colors.rainbow,ver))
+        print(Colors.pink+ver)
         print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        print(Colors.yellow+mo)
+        print(Colors.blue+mo)
         print(lol)
         print((platform.machine())+ ' bit' )
         print('Path: ', idk)
@@ -814,7 +814,7 @@ def fr():
         file_path = fr'C:\Users\{username}\AppData\Local\random.png'
         if os.path.isfile(file_path):
          os.remove(file_path)
-        choice = input(Colors.blue + f'Which option do you choose? -> {Fore.RED} ')
+        choice = input(Colors.red + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
          webbrowser.open("https://github.com/j0taro/pycleaner")
         if choice == '2':
