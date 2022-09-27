@@ -491,13 +491,13 @@ def fr():
         directory_size += os.path.getsize(filename)
      for key in fsizedicr:       
       size = (str(round(fsizedicr[key]*directory_size, 2)) + " " + key)
-     os.system(f"title pycleaner by dynasty, files: [{file_count}], folder size: [{size}]")
+     os.system(f"title pycleaner by dynasty • files: [{file_count}] • folder size: [{size}]")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
      print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2))
      path = Path(ooo)
      if path.is_file():
-      os.system(f"title pycleaner by dynasty, files: [{file_count}], folder size: [{size}]  A DEVELOPER!! ")
+      os.system(f"title pycleaner by dynasty • files: [{file_count}] • folder size: [{size}] • A DEVELOPER!! ")
      choice = input(Colors.red + 'Which option do you choose '+ username+f'? >{Fore.BLUE}  ')
     #restore point
      if choice == '1':
