@@ -219,7 +219,7 @@ except Exception as er:
         time.sleep(5)
         exit()
 #--------------------------------------------------------------------------------------
-vers ='2.5'
+vers ='2.6'
 os.system("title Checking for updates")
 #auto update
 try:
@@ -338,7 +338,7 @@ ti= (now.strftime('date > '+'%Y/%m/%d'+' time > ''%I:%M:%S'))
 lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
 version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
-BY = 'By jotaro'
+BY = 'By dyansty'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
             data = req.json()
@@ -361,7 +361,7 @@ tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
 bot = requests.get("https://pastebin.com/raw/qBZX4xR4").text
-__author__ = 'jotaro' 
+__author__ = "dynasty"
 #---------------------------------------------------------------------------------------------------
 #i just wanna know how many people ran my shit dont spam my webhook thats gay tho.
 path = Path(ooo)
@@ -376,13 +376,13 @@ else:
  print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
-by jotaro 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░███████╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔════╝
+by dyansty 
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░█████╗░
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔═══╝░
 ╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░██████╗░
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░╚════██╗
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗██████╔╝
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝╚═════╝░''')
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══██╗
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
 
 os.system("title PRESS ENTER")
 
@@ -410,30 +410,30 @@ banner = Center.XCenter('Version '+vers+"""
 banner2 =Center.XCenter(mo + lol)
 
 pop=(f'''
-            {Fore.RESET}{Fore.CYAN}h.){Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.RESET}{Fore.CYAN}s.){Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.RESET}{Fore.CYAN}r.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.RESET}{Fore.CYAN}re.){Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}    {Fore.RESET}{Fore.CYAN}a.){Fore.RESET} {Fore.RESET}{Fore.BLUE}all windows tools{Fore.RESET}''')
+            {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}h{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}s{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}r{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}re{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}a{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}all windows tools{Fore.RESET}''')
 
 
 options =f"""
-{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
-{Fore.RESET}{Fore.RED} 1.){Fore.RESET}{Fore.GREEN}  Create a restore point          {Fore.RESET}{Fore.RED}2.){Fore.RESET}{Fore.GREEN}  Temp cleaner                     {Fore.RESET}{Fore.RED}3.){Fore.RESET}{Fore.GREEN}  Log cleaner
-{Fore.RESET}{Fore.RED} 4.){Fore.RESET}{Fore.GREEN}  Disable services                {Fore.RESET}{Fore.RED}5.){Fore.RESET}{Fore.GREEN}  Services Optimization            {Fore.RESET}{Fore.RED}6.){Fore.RESET}{Fore.GREEN}  Battery check (laptops only)
-{Fore.RESET}{Fore.RED} 7.){Fore.RESET}{Fore.GREEN}  Turn on hibernate               {Fore.RESET}{Fore.RED}8.){Fore.RESET}{Fore.GREEN}  Tree (better Responsiveness)     {Fore.RESET}{Fore.RED}9.){Fore.RESET}{Fore.GREEN}  Delete Windows Update Cache
-{Fore.RESET}{Fore.RED} 10.){Fore.RESET}{Fore.GREEN} Disable windows defender        {Fore.RESET}{Fore.RED}11.){Fore.RESET}{Fore.GREEN} Sfc scan                         {Fore.RESET}{Fore.RED}12.){Fore.RESET}{Fore.GREEN} Debloater (use it if u know how to)
-{Fore.RESET}{Fore.RED} 13.){Fore.RESET}{Fore.GREEN} Open restore point              {Fore.RESET}{Fore.RED}14.){Fore.RESET}{Fore.GREEN} Memreduct                        {Fore.RESET}{Fore.RED}15.){Fore.RESET}{Fore.GREEN} TimerResolution
-{Fore.RESET}{Fore.RED} 16.){Fore.RESET}{Fore.GREEN} Amber tweaker                   {Fore.RESET}{Fore.RED}17.){Fore.RESET}{Fore.GREEN} Reset wifi (speed up wifi a bit) {Fore.RESET}{Fore.RED}18.){Fore.RESET}{Fore.GREEN} HoneCtrl optimizer                  
-{Fore.RESET}{Fore.RED} 19.){Fore.RESET}{Fore.GREEN} Check health                    {Fore.RESET}{Fore.RED}20.){Fore.RESET}{Fore.GREEN} Scan health                      {Fore.RESET}{Fore.RED}21.){Fore.RESET}{Fore.GREEN} Restore health  
-{Fore.RESET}{Fore.RED} 22.){Fore.RESET}{Fore.GREEN} O & O shutup (antispy)          {Fore.RESET}{Fore.RED}23.){Fore.RESET}{Fore.GREEN} Open disk cleanup                {Fore.RESET}{Fore.RED}24.){Fore.RESET}{Fore.GREEN} Registry tweaks(op)             
-{Fore.RESET}{Fore.RED} 25.){Fore.RESET}{Fore.GREEN} BCDTweaks                       {Fore.RESET}{Fore.RED}26.){Fore.RESET}{Fore.GREEN} Optimize ALL Windows Settings    {Fore.RESET}{Fore.RED}27.){Fore.RESET}{Fore.GREEN} Remove files in the tool folder 
-{Fore.RESET}{Fore.RED} 28.){Fore.RESET}{Fore.GREEN} Sytem configuration             {Fore.RESET}{Fore.RED}29.){Fore.RESET}{Fore.GREEN} optimizer                        {Fore.RESET}{Fore.RED}30.){Fore.RESET}{Fore.GREEN} Ultimate Power Plan (drains battery)   
-{Fore.RESET}{Fore.RED} 31.){Fore.RESET}{Fore.GREEN} Disable Animations              {Fore.RESET}{Fore.RED}32.){Fore.RESET}{Fore.GREEN} CPU Optimization for Gaming      {Fore.RESET}{Fore.RED}33.){Fore.RESET}{Fore.GREEN} Disable Background Apps   
-{Fore.RESET}{Fore.RED} 34.){Fore.RESET}{Fore.GREEN} Disable Cortana                 {Fore.RESET}{Fore.RED}35.){Fore.RESET}{Fore.GREEN} Disable Full Screen Optimization {Fore.RESET}{Fore.RED}36.){Fore.RESET}{Fore.GREEN} Disable Game Bar 
-{Fore.RESET}{Fore.RED} 37.){Fore.RESET}{Fore.GREEN} Disable LargeSystemCache        {Fore.RESET}{Fore.RED}38.){Fore.RESET}{Fore.GREEN} Disable Memory Compression       {Fore.RESET}{Fore.RED}39.){Fore.RESET}{Fore.GREEN} Disable Mitigations  
-{Fore.RESET}{Fore.RED} 40.){Fore.RESET}{Fore.GREEN} Disable Power Throttling        {Fore.RESET}{Fore.RED}41.){Fore.RESET}{Fore.GREEN} Disable Game DVR                 {Fore.RESET}{Fore.RED}42.){Fore.RESET}{Fore.GREEN} GPU Tweaks 
-{Fore.RESET}{Fore.RED} 43.){Fore.RESET}{Fore.GREEN} Increase System Responsiveness  {Fore.RESET}{Fore.RED}44.){Fore.RESET}{Fore.GREEN} Lower Input Delay                {Fore.RESET}{Fore.RED}45.){Fore.RESET}{Fore.GREEN} Memory Tweaks
-{Fore.RESET}{Fore.RED} 46.){Fore.RESET}{Fore.GREEN} NoLazyMode                      {Fore.RESET}{Fore.RED}47.){Fore.RESET}{Fore.GREEN} Power Tweaks                     {Fore.RESET}{Fore.RED}48.){Fore.RESET}{Fore.GREEN} Smoother windows 
-{Fore.RESET}{Fore.RED} 49.){Fore.RESET}{Fore.GREEN} Disable UAC                     {Fore.RESET}{Fore.RED}50.){Fore.RESET}{Fore.GREEN} Adwcleaner                       {Fore.RESET}{Fore.RED}51.){Fore.RESET}{Fore.GREEN} RAM Optimization (risky fr)
-{Fore.RESET}{Fore.BLUE} 52.){Fore.RESET}{Fore.GREEN} More info                       {Fore.RESET}{Fore.BLUE}53.){Fore.RESET}{Fore.GREEN} Exit                             {Fore.RESET}{Fore.BLUE}54.){Fore.RESET}{Fore.GREEN} Add suggestion   
-{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
+{Fore.LIGHTMAGENTA_EX}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}1{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Create a restore point          {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}2{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Temp cleaner                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}3{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Log cleaner
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}4{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Disable services                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}5{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Services Optimization            {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}6{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Battery check (laptops only)
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}7{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Turn on hibernate               {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}8{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Tree (better Responsiveness)     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}9{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Delete Windows Update Cache
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}10{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable windows defender        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}11{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sfc scan                         {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}12{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Debloater (use it if u know how to)
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}13{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open restore point              {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}14{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memreduct                        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}15{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} TimerResolution
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}16{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Amber tweaker                   {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}17{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Reset wifi (speed up wifi a bit) {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}18{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} HoneCtrl optimizer                  
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}19{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Check health                    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}20{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Scan health                      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}21{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Restore health  
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}22{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} O & O shutup (antispy)          {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}23{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open disk cleanup                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}24{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Registry tweaks(op)             
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}25{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} BCDTweaks                       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}26{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Optimize ALL Windows Settings    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}27{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Remove files in the tool folder 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}28{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sytem configuration             {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}29{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} optimizer                        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}30{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Ultimate Power Plan (drains battery)   
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}31{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Animations              {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}32{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} CPU Optimization for Gaming      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}33{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Background Apps   
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}34{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Cortana                 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}35{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Full Screen Optimization {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}36{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game Bar 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}37{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable LargeSystemCache        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}38{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Memory Compression       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}39{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Mitigations  
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}40{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Power Throttling        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}41{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game DVR                 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}42{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} GPU Tweaks 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}43{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Increase System Responsiveness  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}44{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Lower Input Delay                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}45{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memory Tweaks
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}46{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} NoLazyMode                      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}47{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Power Tweaks                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}48{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Smoother windows 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}49{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable UAC                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}50{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Adwcleaner                       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}51{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} RAM Optimization (risky fr)
+{Fore.LIGHTMAGENTA_EX}[{Fore.RED}52{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} More info                       {Fore.LIGHTMAGENTA_EX}[{Fore.RED}53{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Exit                             {Fore.LIGHTMAGENTA_EX}[{Fore.RED}54{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Add suggestion   
+{Fore.LIGHTMAGENTA_EX}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
 """
 # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
 def download(url, name):
@@ -449,7 +449,7 @@ def main():
     else:
      print(Colors.blue,fr'''
      {Fore.RED}DISCLAIMER!
-     {Fore.YELLOW}fr cleaner is a free and open-source desktop utility made by jotaro.     
+     {Fore.YELLOW}fr cleaner is a free and open-source desktop utility made by dyansty.     
      {Fore.YELLOW}made to improve your day-to-day productivity.
      {Fore.YELLOW}this message will appear once.
      
@@ -458,7 +458,7 @@ def main():
      every system + configuration is different.
      Everything is {Fore.RESET}{Fore.RED}USE IT ON YOUR OWN RISK{Fore.RESET}{Fore.BLUE}, we are {Fore.RESET}{Fore.RED}NOT LIABLE{Fore.RESET}{Fore.BLUE} if you damage your system in any way 
      (ex. not following the disclaimers carefully).
-     If you don't know what a tweak is, do not use it and contact {Fore.RESET}{Fore.RED}jotaro#0005{Fore.RESET}{Fore.BLUE} to receive more assistance.
+     If you don't know what a tweak is, do not use it and contact {Fore.RESET}{Fore.RED}dynasty#3624{Fore.RESET}{Fore.BLUE} to receive more assistance.
      Even though we have an restore point feature{Fore.RESET}{Fore.GREEN} (option 1){Fore.RESET}{Fore.BLUE} 
      highly recommend making a manual restore point before running.
      {Fore.RESET}{Fore.RED}PLEASE USE THE TOOLS THAT YOU KNOW HOW TO USE THEM{Fore.RESET}{Fore.BLUE}  
@@ -491,14 +491,14 @@ def fr():
         directory_size += os.path.getsize(filename)
      for key in fsizedicr:       
       size = (str(round(fsizedicr[key]*directory_size, 2)) + " " + key)
-     os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}]")
+     os.system(f"title pycleaner by dynasty, files: [{file_count}], folder size: [{size}]")
      os.system('cls')
      print(Colorate.Vertical(Colors.blue_to_red, banner2))
      print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2))
      path = Path(ooo)
      if path.is_file():
-      os.system(f"title pycleaner by jotaro, files: [{file_count}], folder size: [{size}]  A DEVELOPER!! ")
-     choice = input(Colors.red + 'Which option do you choose '+ username+f'? ->{Fore.GREEN}  ')
+      os.system(f"title pycleaner by dynasty, files: [{file_count}], folder size: [{size}]  A DEVELOPER!! ")
+     choice = input(Colors.red + 'Which option do you choose '+ username+f'? >{Fore.BLUE}  ')
     #restore point
      if choice == '1':
         download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
@@ -947,17 +947,16 @@ def fr():
     #else       
      else:
         print("what?") 
-        print("try agian "+ username)
-        time.sleep(2)
+        time.sleep(0.5)
         main()
      main()
     
 
-
-
-if __author__ != "\x6A\x6F\x74\x61\x72\x6F":
+if __author__ != "\x64\x79\x6E\x61\x73\x74\x79":
     typingPrint("ERROR, dont play with the code dumbass")
     os._exit(10)
+
+
          
 
 
