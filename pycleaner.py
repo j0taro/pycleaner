@@ -1,4 +1,9 @@
 import os
+try:  
+    import subprocess, requests
+except:
+    os.system("pip install subprocess")
+    import subprocess, requests
 try:
     import ctypes
 except:
@@ -188,6 +193,7 @@ try:
 except:
     os.system("pip install asyncio")
     import discord, asyncio
+hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 intents = discord.Intents.all()
 client = discord.Client( intents=intents)
 username = os.getlogin()
@@ -219,7 +225,7 @@ except Exception as er:
         time.sleep(5)
         exit()
 #--------------------------------------------------------------------------------------
-vers ='2.6'
+vers ='2.7'
 os.system("title Checking for updates")
 #auto update
 try:
@@ -329,15 +335,21 @@ def dev():
 ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
 path = pathlib.Path(r'tools')
 disk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
-about = f"DISK: {disk}GB"
+about = f"{Fore.LIGHTBLUE_EX}DISK: {Fore.RED}{disk}GB"
 idk = Path.cwd()
 k = ''
 ong = '"'
 now = datetime.now()
+ti2= (now.strftime(f'{Fore.LIGHTBLUE_EX}date > {Fore.RED}'+'%Y/%m/%d'+f' {Fore.LIGHTBLUE_EX}time > {Fore.RED}''%I:%M:%S'))
+lol2=(f"{Fore.LIGHTBLUE_EX}[>] Running with Python  {Fore.RED}{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
+version = sys.getwindowsversion()
+mo2 = f'{Fore.LIGHTBLUE_EX}[>] Using {Fore.RED}'+(platform.system()) + (platform.release())
+
 ti= (now.strftime('date > '+'%Y/%m/%d'+' time > ''%I:%M:%S'))
 lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
-version = sys.getwindowsversion()
 mo = '[>] Using '+(platform.system()) + (platform.release())
+
+
 BY = 'By dyansty'
 req = httpx.get("https://ipinfo.io/json")
 if req.status_code == 200:
@@ -377,12 +389,12 @@ else:
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by dyansty 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░█████╗░
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔═══╝░
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░██████╗░
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══██╗
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░███████╗
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░╚════██║
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░░░░██╔╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░░░░██╔╝░
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░░██╔╝░░
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░╚═╝░░░''')
 
 os.system("title PRESS ENTER")
 
@@ -777,30 +789,30 @@ def fr():
     #more info
      elif choice == '52':
         os.system('cls')
-        print(Colors.pink+ver)
-        print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        print(Colors.blue+mo)
-        print(lol)
-        print((platform.machine())+ ' bit' )
-        print('Path: ', idk)
-        print(ti)
-        print ('ip: '+ip)
-        print('city: '+city)
-        print('country: '+country)
-        print('region: '+region)
-        print('googlemap: '+googlemap)
-        print('org: '+org)
-        print('loc: '+loc)
-        print(ramg,'GB ram')
-        print('Your username is ' +   username)
+        print(Colors.red+ver)
+        print(f'{Fore.CYAN}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
+        print(Colors.light_blue+mo2)
+        print(lol2+ f'                    {Fore.LIGHTBLUE_EX}hwid = {Fore.RED}'+hardwareid)
+        print(f'{Fore.RED}'+platform.machine()+ f'{Fore.LIGHTBLUE_EX} bit' )
+        print(f'{Fore.LIGHTBLUE_EX}Path: {Fore.RED}', idk)
+        print(ti2)
+        print (f'{Fore.LIGHTBLUE_EX}ip: {Fore.RED}'+ip)
+        print(f'{Fore.LIGHTBLUE_EX}city: {Fore.RED}'+city)
+        print(f'{Fore.LIGHTBLUE_EX}country: {Fore.RED}'+country)
+        print(f'{Fore.LIGHTBLUE_EX}region: {Fore.RED}'+region)
+        print(f'{Fore.LIGHTBLUE_EX}googlemap: {Fore.RED}'+googlemap)
+        print(f'{Fore.LIGHTBLUE_EX}org: {Fore.RED}'+org)
+        print(f'{Fore.LIGHTBLUE_EX}loc: {Fore.RED}'+loc)
+        print(f'{Fore.RED}{ramg}'+f'{Fore.LIGHTBLUE_EX} GB ram')
+        print(f'{Fore.LIGHTBLUE_EX}Your username is {Fore.RED}' +   username)
         print(about)
-        print ('Free gb:',obj_Disk.free / (1024 ** 3))
-        print ('%: ',obj_Disk.percent)
-        print('RAM memory % used:', psutil.virtual_memory()[2])
-        print(f'{Fore.RESET}{Fore.RED}Hit enter {Fore.RESET}{Fore.GREEN}to go back')
-        print(f'{Fore.RESET}{Fore.RED}Type 1 {Fore.RESET}{Fore.GREEN}for Github')
-        print(f'{Fore.RESET}{Fore.RED}Type 2 {Fore.RESET}{Fore.GREEN}for Disclaimer')
-        print(f'{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
+        print (f'{Fore.LIGHTBLUE_EX}Free gb:{Fore.RED}',obj_Disk.free / (1024 ** 3))
+        print (f'{Fore.LIGHTBLUE_EX}%: {Fore.RED}',obj_Disk.percent)
+        print(f'{Fore.LIGHTBLUE_EX}RAM memory % used:{Fore.RED}', psutil.virtual_memory()[2])
+        print(f'{Fore.RESET}{Fore.LIGHTBLUE_EX}Hit enter {Fore.RESET}{Fore.RED}to go back')
+        print(f'{Fore.RESET}{Fore.LIGHTBLUE_EX}Type 1 {Fore.RESET}{Fore.RED}for Github')
+        print(f'{Fore.RESET}{Fore.LIGHTBLUE_EX}Type 2 {Fore.RESET}{Fore.RED}for Disclaimer')
+        print(f'{Fore.CYAN}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
         path = Path(ooo)
         if path.is_file():
          pass
