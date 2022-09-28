@@ -410,7 +410,7 @@ banner = Center.XCenter('Version '+vers+"""
 banner2 =Center.XCenter(mo + lol)
 
 pop=(f'''
-            {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}h{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}hibernate{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}s{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}shutdown{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}r{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}restart{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}re{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}restart explorer{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.WHITE}a{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.BLUE}all windows tools{Fore.RESET}''')
+            {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}h{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}hibernate{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}s{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}shutdown{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}r{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}re{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart explorer{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}a{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}all windows tools{Fore.RESET}''')
 
 
 options =f"""
@@ -432,7 +432,7 @@ options =f"""
 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}43{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Increase System Responsiveness  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}44{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Lower Input Delay                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}45{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memory Tweaks
 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}46{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} NoLazyMode                      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}47{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Power Tweaks                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}48{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Smoother windows 
 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}49{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable UAC                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}50{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Adwcleaner                       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}51{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} RAM Optimization (risky fr)
-{Fore.LIGHTMAGENTA_EX}[{Fore.RED}52{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} More info                       {Fore.LIGHTMAGENTA_EX}[{Fore.RED}53{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Exit                             {Fore.LIGHTMAGENTA_EX}[{Fore.RED}54{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Add suggestion   
+{Fore.LIGHTMAGENTA_EX}[{Fore.RED}52{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} More info                       {Fore.LIGHTMAGENTA_EX}[{Fore.RED}53{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Exit                             {Fore.LIGHTMAGENTA_EX}[{Fore.RED}54{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Add suggestion   
 {Fore.LIGHTMAGENTA_EX}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
 """
 # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
